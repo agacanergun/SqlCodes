@@ -7,7 +7,6 @@ namespace SqlCodes.Controllers
         public IActionResult Index()
         {
             return View();
-            Okan
         }
     }
 }
