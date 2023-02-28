@@ -63,9 +63,6 @@ namespace SqlCodes.Controllers
         [Route("InnerJoin/tr")]
         public IActionResult InnerJoinPage() { return View(); }
 
-        //innerjoinepage ye kadar viewler oluşturuldu 
-        //bu yorum satırının altından devam edicez.
-
         [Route("LeftJoin/tr")]
         public IActionResult LeftJoinPage() { return View(); }
 
@@ -98,6 +95,8 @@ namespace SqlCodes.Controllers
 
         [Route("Unique/tr")]
         public IActionResult UniquePage() { return View(); }
+
+        //burdan devam
 
         [Route("PrimaryKey/tr")]
         public IActionResult PrimaryKeyPage() { return View(); }
