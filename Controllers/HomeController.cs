@@ -96,8 +96,6 @@ namespace SqlCodes.Controllers
         [Route("Unique/tr")]
         public IActionResult UniquePage() { return View(); }
 
-        //burdan devam
-
         [Route("PrimaryKey/tr")]
         public IActionResult PrimaryKeyPage() { return View(); }
 
