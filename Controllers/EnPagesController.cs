@@ -2,188 +2,189 @@
 
 namespace SqlCodes.Controllers
 {
-    public class HomeController : Controller
+    public class EnPagesController : Controller
     {
+        [Route("MainPage/en")]
         public IActionResult Index() { return View(); }
 
-        [Route("sqlUsage/tr")]
+        [Route("sqlUsage/en")]
         public IActionResult SqlUsagePage() { return View(); }
 
-        [Route("GeneralDataTypes/tr")]
+        [Route("GeneralDataTypes/en")]
         public IActionResult GeneralDataTypesPage() { return View(); }
 
-        [Route("DbDataTypes/tr")]
+        [Route("DbDataTypes/en")]
         public IActionResult DbDataTypesPage() { return View(); }
 
-        [Route("Select/tr")]
+        [Route("Select/en")]
         public IActionResult SelectPage() { return View(); }
 
-        [Route("Distinct/tr")]
+        [Route("Distinct/en")]
         public IActionResult DistinctPage() { return View(); }
 
-        [Route("Where/tr")]
+        [Route("Where/en")]
         public IActionResult WherePage() { return View(); }
 
-        [Route("AndOrUse/tr")]
+        [Route("AndOrUse/en")]
         public IActionResult AndOrUsePage() { return View(); }
 
-        [Route("OrderBy/tr")]
+        [Route("OrderBy/en")]
         public IActionResult OrderByPage() { return View(); }
 
-        [Route("InsertInto/tr")]
+        [Route("InsertInto/en")]
         public IActionResult InsertIntoPage() { return View(); }
 
-        [Route("Update/tr")]
+        [Route("Update/en")]
         public IActionResult UpdatePage() { return View(); }
 
-        [Route("Delete/tr")]
+        [Route("Delete/en")]
         public IActionResult DeletePage() { return View(); }
 
-        [Route("SelectTop/tr")]
+        [Route("SelectTop/en")]
         public IActionResult SelectTopPage() { return View(); }
 
-        [Route("Like/tr")]
+        [Route("Like/en")]
         public IActionResult LikePage() { return View(); }
 
-        [Route("LikeMarks/tr")]
+        [Route("LikeMarks/en")]
         public IActionResult LikeMarksPage() { return View(); }
 
-        [Route("In/tr")]
+        [Route("In/en")]
         public IActionResult InPage() { return View(); }
 
-        [Route("Between/tr")]
+        [Route("Between/en")]
         public IActionResult BetweenPage() { return View(); }
 
-        [Route("Aliases/tr")]
+        [Route("Aliases/en")]
         public IActionResult AliasesPage() { return View(); }
 
-        [Route("InnerJoin/tr")]
+        [Route("InnerJoin/en")]
         public IActionResult InnerJoinPage() { return View(); }
 
-        [Route("LeftJoin/tr")]
+        [Route("LeftJoin/en")]
         public IActionResult LeftJoinPage() { return View(); }
 
-        [Route("RightJoin/tr")]
+        [Route("RightJoin/en")]
         public IActionResult RightJoinPage() { return View(); }
 
-        [Route("FullJoin/tr")]
+        [Route("FullJoin/en")]
         public IActionResult FullJoinPage() { return View(); }
 
-        [Route("Union/tr")]
+        [Route("Union/en")]
         public IActionResult UnionPage() { return View(); }
 
-        [Route("SelectInto/tr")]
+        [Route("SelectInto/en")]
         public IActionResult SelectIntoPage() { return View(); }
 
-        [Route("InsertIntoSelect/tr")]
+        [Route("InsertIntoSelect/en")]
         public IActionResult InsertIntoSelectPage() { return View(); }
 
-        [Route("CreateDb/tr")]
+        [Route("CreateDb/en")]
         public IActionResult CreateDbPage() { return View(); }
 
-        [Route("CreateTable/tr")]
+        [Route("CreateTable/en")]
         public IActionResult CreateTable() { return View(); }
 
-        [Route("Constraints/tr")]
+        [Route("Constraints/en")]
         public IActionResult ConstraintsPage() { return View(); }
 
-        [Route("NotNull/tr")]
+        [Route("NotNull/en")]
         public IActionResult NotNullPage() { return View(); }
 
-        [Route("Unique/tr")]
+        [Route("Unique/en")]
         public IActionResult UniquePage() { return View(); }
 
-        [Route("PrimaryKey/tr")]
+        [Route("PrimaryKey/en")]
         public IActionResult PrimaryKeyPage() { return View(); }
 
-        [Route("ForeignKey/tr")]
+        [Route("ForeignKey/en")]
         public IActionResult ForeignKeyPage() { return View(); }
 
-        [Route("Check/tr")]
+        [Route("Check/en")]
         public IActionResult CheckPage() { return View(); }
 
-        [Route("Default/tr")]
+        [Route("Default/en")]
         public IActionResult DefaultPage() { return View(); }
 
-        [Route("CreateIndex/tr")]
+        [Route("CreateIndex/en")]
         public IActionResult CreateIndexPage() { return View(); }
 
-        [Route("Drop/tr")]
+        [Route("Drop/en")]
         public IActionResult DropPage() { return View(); }
 
-        [Route("Alter/tr")]
+        [Route("Alter/en")]
         public IActionResult AlterPage() { return View(); }
 
-        [Route("AutoIncrement/tr")]
+        [Route("AutoIncrement/en")]
         public IActionResult AutoIncrementPage() { return View(); }
 
-        [Route("Views/tr")]
+        [Route("Views/en")]
         public IActionResult ViewsPage() { return View(); }
 
-        [Route("DateFunctions/tr")]
+        [Route("DateFunctions/en")]
         public IActionResult DateFunctionsPage() { return View(); }
 
-        [Route("DateFormat/tr")]
+        [Route("DateFormat/en")]
         public IActionResult DateFormatPage() { return View(); }
 
-        [Route("Convert/tr")]
+        [Route("Convert/en")]
         public IActionResult ConvertPage() { return View(); }
 
-        [Route("FindNullValues/tr")]
+        [Route("FindNullValues/en")]
         public IActionResult FindNullValuesPage() { return View(); }
 
-        [Route("NullFunctions/tr")]
+        [Route("NullFunctions/en")]
         public IActionResult NullFunctionsPage() { return View(); }
 
-        [Route("AvgFunction/tr")]
+        [Route("AvgFunction/en")]
         public IActionResult AvgFunctionPage() { return View(); }
 
-        [Route("CountFunction/tr")]
+        [Route("CountFunction/en")]
         public IActionResult CountFunctionPage() { return View(); }
 
-        [Route("FirstFunction/tr")]
+        [Route("FirstFunction/en")]
         public IActionResult FirstFunctionPage() { return View(); }
 
-        [Route("LastFunction/tr")]
+        [Route("LastFunction/en")]
         public IActionResult LastFunctionPage() { return View(); }
 
-        [Route("MaxFunction/tr")]
+        [Route("MaxFunction/en")]
         public IActionResult MaxFunctionPage() { return View(); }
 
-        [Route("MinFunction/tr")]
+        [Route("MinFunction/en")]
         public IActionResult MinFunctionPage() { return View(); }
 
-        [Route("SumFunction/tr")]
+        [Route("SumFunction/en")]
         public IActionResult SumFunctionPage() { return View(); }
 
-        [Route("GroupByFunction/tr")]
+        [Route("GroupByFunction/en")]
         public IActionResult GroupByFunctionPage() { return View(); }
 
-        [Route("Having/tr")]
+        [Route("Having/en")]
         public IActionResult HavingPage() { return View(); }
 
-        [Route("UcaseUpperFunction/tr")]
+        [Route("UcaseUpperFunction/en")]
         public IActionResult UcaseUpperFunctionPage() { return View(); }
 
-        [Route("LcaseLoewerFunction/tr")]
+        [Route("LcaseLoewerFunction/en")]
         public IActionResult LcaseLoewerFunctionPage() { return View(); }
 
-        [Route("MidFunction/tr")]
+        [Route("MidFunction/en")]
         public IActionResult MidFunctionPage() { return View(); }
 
-        [Route("LenFunction/tr")]
+        [Route("LenFunction/en")]
         public IActionResult LenFunctionPage() { return View(); }
 
-        [Route("RoundFunction/tr")]
+        [Route("RoundFunction/en")]
         public IActionResult RoundFunctionPage() { return View(); }
 
-        [Route("NowFunction/tr")]
+        [Route("NowFunction/en")]
         public IActionResult NowFunctionPage() { return View(); }
 
-        [Route("FormatFunction/tr")]
+        [Route("FormatFunction/en")]
         public IActionResult FormatFunctionPage() { return View(); }
 
-        [Route("ReplaceFunction/tr")]
+        [Route("ReplaceFunction/en")]
         public IActionResult ReplaceFunctionPage() { return View(); }
     }
 }

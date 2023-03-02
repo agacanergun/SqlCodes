@@ -1,0 +1,315 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Appsettingsjson</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-grid.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-reboot.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-utilities.css" />
+    <link rel="stylesheet" href="~/assets/css/aside.css" />
+    <link rel="stylesheet" href="~/assets/css/advertisingside.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<style>
+</style>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-warning ">
+            <div class="container-fluid ">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="row g-0">
+        <div class="col-2">
+
+            <aside>
+                <br /><br />
+                <a asp-controller="EnPages" asp-action="SqlUsagePage">
+                    <i class="fa fa-user-o" aria-hidden="true"></i>
+                    SQL Usage
+                </a>
+                <a asp-controller="EnPages" asp-action="GeneralDataTypesPage">
+                    <i class="fa fa-laptop" aria-hidden="true"></i>
+                    Genel Data Types
+                </a>
+                <a asp-controller="EnPages" asp-action="DbDataTypesPage">
+                    <i class="fa fa-clone" aria-hidden="true"></i>
+                    DB Data Types
+                </a>
+                <a asp-controller="EnPages" asp-action="SelectPage">
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                    Select
+                </a>
+                <a asp-controller="EnPages" asp-action="DistinctPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Distinct
+                </a>
+                <a asp-controller="EnPages" asp-action="WherePage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Where
+                </a>
+                <a asp-controller="EnPages" asp-action="AndOrUsePage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    And & Or Usage
+                </a>
+                <a asp-controller="EnPages" asp-action="OrderByPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Order By
+                </a>
+                <a asp-controller="EnPages" asp-action="InsertIntoPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Insert Into
+                </a>
+                <a asp-controller="EnPages" asp-action="UpdatePage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Update
+                </a>
+                <a asp-controller="EnPages" asp-action="DeletePage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Delete
+                </a>
+                <a asp-controller="EnPages" asp-action="SelectTopPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Select Top (Limit)
+                </a>
+                <a asp-controller="EnPages" asp-action="LikePage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Like
+                </a>
+                <a asp-controller="EnPages" asp-action="LikeMarksPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Like Signs
+                </a>
+                <a asp-controller="EnPages" asp-action="InPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    In
+                </a>
+                <a asp-controller="EnPages" asp-action="BetweenPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Between
+                </a>
+                <a asp-controller="EnPages" asp-action="AliasesPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Aliases (AS Kullanımı)
+                </a>
+                <a asp-controller="EnPages" asp-action="InnerJoinPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Inner Join
+                </a>
+                <a asp-controller="EnPages" asp-action="LeftJoinPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Left Join
+                </a>
+                <a asp-controller="EnPages" asp-action="RightJoinPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Right Join
+                </a>
+                <a asp-controller="EnPages" asp-action="FullJoinPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Full Join
+                </a>
+                <a asp-controller="EnPages" asp-action="UnionPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Union
+                </a>
+                <a asp-controller="EnPages" asp-action="SelectIntoPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Select Into
+                </a>
+                <a asp-controller="EnPages" asp-action="InsertIntoSelectPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Insert Into Select
+                </a>
+                <a asp-controller="EnPages" asp-action="CreateDbPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Create DB
+                </a>
+                <a asp-controller="EnPages" asp-action="CreateTable">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Create Table
+                </a>
+                <a asp-controller="EnPages" asp-action="ConstraintsPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Constraints
+                </a>
+                <a asp-controller="EnPages" asp-action="NotNullPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Not Null
+                </a>
+                <a asp-controller="EnPages" asp-action="UniquePage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Unique
+                </a>
+                <a asp-controller="EnPages" asp-action="PrimaryKeyPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Primary Key
+                </a>
+                <a asp-controller="EnPages" asp-action="ForeignKeyPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Foreign Key
+                </a>
+                <a asp-controller="EnPages" asp-action="CheckPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Check
+                </a>
+                <a asp-controller="EnPages" asp-action="DefaultPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Default
+                </a>
+                <a asp-controller="EnPages" asp-action="CreateIndexPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Create Index
+                </a>
+                <a asp-controller="EnPages" asp-action="DropPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Drop
+                </a>
+                <a asp-controller="EnPages" asp-action="AlterPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Alter
+                </a>
+                <a asp-controller="EnPages" asp-action="AutoIncrementPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Auto Increment(Increasing Number)
+                </a>
+                <a asp-controller="EnPages" asp-action="ViewsPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Views
+                </a>
+                <a asp-controller="EnPages" asp-action="DateFunctionsPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Date Fonksiyonları
+                </a>
+                <a asp-controller="EnPages" asp-action="DateFormatPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Date_Format
+                </a>
+                <a asp-controller="EnPages" asp-action="ConvertPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Convert
+                </a>
+                <a asp-controller="EnPages" asp-action="FindNullValuesPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Finding Null Values
+                </a>
+                <a asp-controller="EnPages" asp-action="NullFunctionsPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Null Functions
+                </a>
+                <a asp-controller="EnPages" asp-action="AvgFunctionPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Avg()
+                </a>
+                <a asp-controller="EnPages" asp-action="CountFunctionPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Count()
+                </a>
+                <a asp-controller="EnPages" asp-action="FirstFunctionPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    First()
+                </a>
+                <a asp-controller="EnPages" asp-action="LastFunctionPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Last()
+                </a>
+                <a asp-controller="EnPages" asp-action="MaxFunctionPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Max()
+                </a>
+                <a asp-controller="EnPages" asp-action="MinFunctionPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Min()
+                </a>
+                <a asp-controller="EnPages" asp-action="SumFunctionPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Sum()
+                </a>
+                <a asp-controller="EnPages" asp-action="GroupByFunctionPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Group By()
+                </a>
+                <a asp-controller="EnPages" asp-action="HavingPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Having
+                </a>
+                <a asp-controller="EnPages" asp-action="UcaseUpperFunctionPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Ucase()-Upper()
+                </a>
+                <a asp-controller="EnPages" asp-action="LcaseLoewerFunctionPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Lcase()-Lower()
+                </a>
+                <a asp-controller="EnPages" asp-action="MidFunctionPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Mid()
+                </a>
+                <a asp-controller="EnPages" asp-action="LenFunctionPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Len()
+                </a>
+                <a asp-controller="EnPages" asp-action="RoundFunctionPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Round()
+                </a>
+                <a asp-controller="EnPages" asp-action="NowFunctionPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Now()
+                </a>
+                <a asp-controller="EnPages" asp-action="FormatFunctionPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Format()
+                </a>
+                <a asp-controller="EnPages" asp-action="ReplaceFunctionPage">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    Replace()
+                </a>
+
+            </aside>
+        </div>
+        <div class="col-8">
+            @RenderBody()
+
+        </div>
+        <div class="col-2">
+            <advertisingside>
+
+            </advertisingside>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <advertisingsbottom>
+
+        </advertisingsbottom>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>
