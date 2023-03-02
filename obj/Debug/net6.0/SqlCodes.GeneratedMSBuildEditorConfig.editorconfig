@@ -20,32 +20,92 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBbGlhc2VzUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/AlterPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBbHRlclBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/AndOrUsePage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBbmRPclVzZVBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/AutoIncrementPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBdXRvSW5jcmVtZW50UGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/AvgFunctionPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBdmdGdW5jdGlvblBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/BetweenPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCZXR3ZWVuUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/CheckPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGVja1BhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/ConstraintsPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb25zdHJhaW50c1BhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/ConvertPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb252ZXJ0UGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/CountFunctionPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb3VudEZ1bmN0aW9uUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/CreateDbPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhdGVEYlBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/CreateIndexPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhdGVJbmRleFBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/CreateTable.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhdGVUYWJsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/DateFormatPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEYXRlRm9ybWF0UGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/DateFunctionsPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEYXRlRnVuY3Rpb25zUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/DbDataTypesPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEYkRhdGFUeXBlc1BhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/DefaultPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZWZhdWx0UGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/DistinctPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEaXN0aW5jdFBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/DropPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEcm9wUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/FindNullValuesPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGaW5kTnVsbFZhbHVlc1BhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/FirstFunctionPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGaXJzdEZ1bmN0aW9uUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/ForeignKeyPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGb3JlaWduS2V5UGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/FormatFunctionPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGb3JtYXRGdW5jdGlvblBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/FullJoinPage.cshtml]
@@ -54,6 +114,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/GeneralDataTypesPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHZW5lcmFsRGF0YVR5cGVzUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/GroupByFunctionPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHcm91cEJ5RnVuY3Rpb25QYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/HavingPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIYXZpbmdQYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/Index.cshtml]
@@ -76,8 +144,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbnNlcnRJbnRvU2VsZWN0UGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/LastFunctionPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMYXN0RnVuY3Rpb25QYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/LcaseLoewerFunctionPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMY2FzZUxvZXdlckZ1bmN0aW9uUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/LeftJoinPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMZWZ0Sm9pblBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/LenFunctionPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMZW5GdW5jdGlvblBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/LikeMarksPage.cshtml]
@@ -88,16 +168,48 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMaWtlUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/MaxFunctionPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNYXhGdW5jdGlvblBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/MidFunctionPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNaWRGdW5jdGlvblBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/MinFunctionPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNaW5GdW5jdGlvblBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/NotNullPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOb3ROdWxsUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/NowFunctionPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOb3dGdW5jdGlvblBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/NullFunctionsPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOdWxsRnVuY3Rpb25zUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/OrderByPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxPcmRlckJ5UGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/PrimaryKeyPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcmltYXJ5S2V5UGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/ReplaceFunctionPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZXBsYWNlRnVuY3Rpb25QYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/RightJoinPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSaWdodEpvaW5QYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/RoundFunctionPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSb3VuZEZ1bmN0aW9uUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/SelectIntoPage.cshtml]
@@ -116,6 +228,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTcWxVc2FnZVBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/SumFunctionPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdW1GdW5jdGlvblBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/UcaseUpperFunctionPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVY2FzZVVwcGVyRnVuY3Rpb25QYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/UnionPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVbmlvblBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -126,6 +246,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/UpdatePage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVcGRhdGVQYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/ViewsPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWaWV3c1BhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/MONSTER/source/repos/SqlCodes/SqlCodes/Views/Home/WherePage.cshtml]
