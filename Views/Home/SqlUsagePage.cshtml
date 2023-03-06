@@ -9,7 +9,7 @@
 
 <div class="TxtClipBoard">
     <div class="ClipBoardButton">
-        <button id="HTMLButton" style="border: none; background-color:dimgray; color:aqua;">
+        <button id="HTMLButton" style="border: none; background-color: #2b3034; color:azure;">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
                 <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
                 <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
@@ -19,10 +19,7 @@
     </div>
     <div class="Highlight">
         <pre tabindex="0" class="chroma">
-        <code class="langueage-html" data-lang="html">
-
-        <hr />
-        <br /><br />
+        <code class="langueage-html" data-lang="html"><br />
         <span>Satır1</span>
         <span>Satır2</span>
         <span>Satır3</span>
@@ -31,8 +28,6 @@
             </code>
         </pre>
     </div>
-
-
 </div>
 
 
@@ -56,90 +51,27 @@
 
 <style>
     .TxtClipBoard {
-        background-color: dimgray;
         height: max-content;
-        width: 30%;
-        border-radius: 8px;
+        width: 80%;
+        margin: auto;
     }
 
         .TxtClipBoard .ClipBoardButton {
-            background: none;
-            background-color: dimgray;
+            background-color: #2b3034;
             float: right;
             margin-right: 20px;
-            margin-top: 15px;
-            border-radius: 8px;
+            margin-top: 14px;
+        }
+
+        .TxtClipBoard .Highlight {
+            border-radius: 18px;
+            background-color: #2b3034;
+            color:aliceblue;
         }
 
     * {
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
-        font-family: "Poppins", sans-serif;
     }
 
-    body {
-        min-height: 100vh;
-        width: 100%;
-        background: #fdfcfc;
-    }
-
-    .text-boxes {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0 30px;
-        margin-bottom: 60px;
-    }
-
-        .text-boxes .text-box {
-            height: 380px;
-            max-width: 660px;
-            width: 100%;
-            margin: 55px 0;
-        }
-
-            .text-boxes .text-box .topic {
-                font-size: 18px;
-                font-weight: 600;
-                color: #265df2;
-                margin: 4px;
-            }
-
-            .text-boxes .text-box textarea {
-                height: 100%;
-                width: 100%;
-                padding: 30px;
-                font-size: 15px;
-                font-weight: 400;
-                outline: none;
-                border: 1px solid #265df2;
-                border-radius: 8px;
-                background: #e7edfe;
-            }
-
-    .text-box textarea::-webkit-scrollbar {
-        display: none;
-    }
-
-    .text-boxes .text-box button {
-        height: 45px;
-        width: 155px;
-        color: #fff;
-        background: #265df2;
-        outline: none;
-        border: none;
-        border-radius: 8px;
-        font-size: 17px;
-        font-weight: 400;
-        margin: 8px 0;
-        cursor: pointer;
-        transition: all 0.4s ease;
-    }
-
-        .text-boxes .text-box button:hover {
-            background: #0e4bf1;
-        }
 </style>
