@@ -181,6 +181,10 @@
       "PackagePath": "staticwebassets\\assets\\css\\ClipBoard.css"
     },
     {
+      "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\css\\Table.css",
+      "PackagePath": "staticwebassets\\assets\\css\\Table.css"
+    },
+    {
       "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\css\\advertisingside.css",
       "PackagePath": "staticwebassets\\assets\\css\\advertisingside.css"
     },

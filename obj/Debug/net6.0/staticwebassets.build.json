@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FWskOUYNi9JK8rOqH0WOSIqxMpLSM2TgLCjYjNaPffc=",
+  "Hash": "mCoKbQ3LWkS7wr5N07nkT5MFs5ZWgB7PR7ToY0dBWw4=",
   "Source": "SqlCodes",
   "BasePath": "_content/SqlCodes",
   "Mode": "Default",
@@ -814,6 +814,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\css\\ClipBoard.css"
+    },
+    {
+      "Identity": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\css\\Table.css",
+      "SourceId": "SqlCodes",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\",
+      "BasePath": "_content/SqlCodes",
+      "RelativePath": "assets/css/Table.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\css\\Table.css"
     },
     {
       "Identity": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\js\\CopyButtonTR\\CoppyButtonsTr.js",
