@@ -31,3 +31,159 @@
 </div>
 
 
+
+
+@*tablo*@
+
+<div class="container">
+
+	<div class="table">
+		<div class="table-header">
+			<div class="header__item"><a id="name" class="filter__link">Komut</a></div>
+			<div class="header__item"><a id="wins" class="filter__link filter__link--number">Wins</a></div>
+		</div>
+		<div class="table-content">
+			<div class="table-row">
+				<div class="table-data">Select</div>
+				<div class="table-data">2</div>
+			</div>
+			<div class="table-row">
+				<div class="table-data">Update</div>
+				<div class="table-data">1</div>
+			</div>
+			<div class="table-row">
+				<div class="table-data">Delete</div>
+				<div class="table-data">0</div>
+			</div>
+			<div class="table-row">
+				<div class="table-data">Insert Into</div>
+				<div class="table-data">0</div>
+			</div>
+			<div class="table-row">
+				<div class="table-data">Create Database</div>
+				<div class="table-data">0</div>
+			</div>
+			<div class="table-row">
+				<div class="table-data">Alter Database</div>
+				<div class="table-data">0</div>
+			</div>
+			<div class="table-row">
+				<div class="table-data">Create Table</div>
+				<div class="table-data">0</div>
+			</div>
+			<div class="table-row">
+				<div class="table-data">Alter Table</div>
+				<div class="table-data">0</div>
+			</div>
+			<div class="table-row">
+				<div class="table-data">Drop Table</div>
+				<div class="table-data">0</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+@*tablo css*@
+
+<style>
+
+	$base-spacing-unit: 18px;
+	$half-spacing-unit: $base-spacing-unit / 3;
+
+	$color-alpha: #1772FF;
+	$color-form-highlight: #EEEEEE;
+
+	*, *:before, *:after {
+		box-sizing: border-box;
+	}
+
+	body {
+		padding: $base-spacing-unit;
+		font-family: 'Source Sans Pro', sans-serif;
+		margin: 0;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		margin: 0;
+	}
+
+	.container {
+		max-width: 1000px;
+		margin-right: auto;
+		margin-left: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
+	}
+
+	.table {
+		width: 80%;
+		border: 1px solid $color-form-highlight;
+	}
+
+	.table-header {
+		display: flex;
+		width: 100%;
+		background: #000;
+		padding: ($half-spacing-unit * 1.5) 0;
+	}
+
+	.table-row {
+		display: flex;
+		width: 100%;
+		padding: ($half-spacing-unit * 1.5) 0;
+		&:nth-of-type(odd)
+
+	{
+		background: $color-form-highlight;
+	}
+
+	}
+
+	.table-data, .header__item {
+		flex: 1 1 20%;
+		margin-left: 25px;
+	}
+
+	.header__item {
+		text-transform: uppercase;
+	}
+
+	.filter__link {
+		color: white;
+		text-decoration: none;
+		position: relative;
+		display: inline-block;
+		padding-left: $base-spacing-unit;
+		padding-right: $base-spacing-unit;
+		margin-left: -17px;
+		&::after
+
+	{
+		content: '';
+		position: absolute;
+		right: -($half-spacing-unit * 1.5);
+		color: white;
+		font-size: $half-spacing-unit;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	&.desc::after {
+		content: '(desc)';
+	}
+
+	&.asc::after {
+		content: '(asc)';
+	}
+
+	}
+
+
+</style>
+
