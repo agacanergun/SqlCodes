@@ -177,6 +177,10 @@
       "PackagePath": "staticwebassets\\js\\bootstrap.min.js.map"
     },
     {
+      "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\css\\ClipBoard.css",
+      "PackagePath": "staticwebassets\\assets\\css\\ClipBoard.css"
+    },
+    {
       "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\css\\advertisingside.css",
       "PackagePath": "staticwebassets\\assets\\css\\advertisingside.css"
     },
