@@ -185,6 +185,22 @@
       "PackagePath": "staticwebassets\\assets\\css\\aside.css"
     },
     {
+      "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\js\\CopyButtonTR\\CopyButtonTr1.js",
+      "PackagePath": "staticwebassets\\assets\\js\\CopyButtonTR\\CopyButtonTr1.js"
+    },
+    {
+      "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\js\\CopyButtonTR\\CopyButtonTr2.js",
+      "PackagePath": "staticwebassets\\assets\\js\\CopyButtonTR\\CopyButtonTr2.js"
+    },
+    {
+      "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\js\\CopyButtonTR\\CopyButtonTr3.js",
+      "PackagePath": "staticwebassets\\assets\\js\\CopyButtonTR\\CopyButtonTr3.js"
+    },
+    {
+      "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\js\\CopyButtonTR\\CopyButtonTr4.js",
+      "PackagePath": "staticwebassets\\assets\\js\\CopyButtonTR\\CopyButtonTr4.js"
+    },
+    {
       "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
