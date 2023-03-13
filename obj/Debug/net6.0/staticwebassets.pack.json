@@ -193,6 +193,10 @@
       "PackagePath": "staticwebassets\\assets\\css\\aside.css"
     },
     {
+      "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\css\\site.css",
+      "PackagePath": "staticwebassets\\assets\\css\\site.css"
+    },
+    {
       "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\js\\CopyButtonTR\\CoppyButtonsTr.js",
       "PackagePath": "staticwebassets\\assets\\js\\CopyButtonTR\\CoppyButtonsTr.js"
     },

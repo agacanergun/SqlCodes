@@ -12,6 +12,8 @@
 .table {
     width: 90%;
     border: 1px solid #eee;
+    color: black;
+    background-color: #d7d7d7;
 }
 
 .table-header {
@@ -56,3 +58,5 @@
 .header-item-right {
     width: 75%;
 }
+
+
