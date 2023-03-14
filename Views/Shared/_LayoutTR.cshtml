@@ -1,320 +1,182 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Appsettingsjson</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-grid.css" />
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-reboot.css" />
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-utilities.css" />
-    <link rel="stylesheet" href="~/assets/css/aside.css" />
-    <link rel="stylesheet" href="~/assets/css/advertisingside.css" />
-    <link rel="stylesheet" href="~/assets/css/ClipBoard.css" />
-    <link rel="stylesheet" href="~/assets/css/Table.css" />
-    <link rel="stylesheet" href="~/assets/css/site.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+
+    <title>SQLCODES</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--
+    Ramayana CSS Template
+    https://templatemo.com/tm-529-ramayana
+    -->
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="~/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="~/assets/css/templatemo-style.css">
+    <link rel="stylesheet" href="~/assets/css/owl.css">
+
 </head>
-<style>
-</style>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-warning ">
-            <div class="container-fluid ">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled">Disabled</a>
-                        </li>
-                    </ul>
-                </div>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+                    <div class="logo">
+                        <a href="index.html">sqlcodes</a>
+                    </div>
+                </header>
+                @RenderBody()
             </div>
-        </nav>
-    </header>
-
-    <div class="row g-0">
-        <div class="mainleft col-2">
-
-            <aside>
-                <br /><br />
-                <a asp-controller="Home" asp-action="SqlUsagePage">
-                    <i class="fa fa-user-o" aria-hidden="true"></i>
-                    SQL Kullanımı
-                </a>
-                <a asp-controller="Home" asp-action="GeneralDataTypesPage">
-                    <i class="fa fa-laptop" aria-hidden="true"></i>
-                    Genel Data Tipleri
-                </a>
-                <a asp-controller="Home" asp-action="DbDataTypesPage">
-                    <i class="fa fa-clone" aria-hidden="true"></i>
-                    DB Data Tipleri
-                </a>
-                <a asp-controller="Home" asp-action="SelectPage">
-                    <i class="fa fa-star-o" aria-hidden="true"></i>
-                    Select
-                </a>
-                <a asp-controller="Home" asp-action="DistinctPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Distinct
-                </a>
-                <a asp-controller="Home" asp-action="WherePage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Where
-                </a>
-                <a asp-controller="Home" asp-action="AndOrUsePage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    And & Or Kullanımı
-                </a>
-                <a asp-controller="Home" asp-action="OrderByPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Order By
-                </a>
-                <a asp-controller="Home" asp-action="InsertIntoPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Insert Into
-                </a>
-                <a asp-controller="Home" asp-action="UpdatePage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Update
-                </a>
-                <a asp-controller="Home" asp-action="DeletePage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Delete
-                </a>
-                <a asp-controller="Home" asp-action="SelectTopPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Select Top (Limit)
-                </a>
-                <a asp-controller="Home" asp-action="LikePage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Like
-                </a>
-                <a asp-controller="Home" asp-action="LikeMarksPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Like işaretleri
-                </a>
-                <a asp-controller="Home" asp-action="InPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    In
-                </a>
-                <a asp-controller="Home" asp-action="BetweenPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Between
-                </a>
-                <a asp-controller="Home" asp-action="AliasesPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Aliases (AS Kullanımı)
-                </a>
-                <a asp-controller="Home" asp-action="InnerJoinPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Inner Join
-                </a>
-                <a asp-controller="Home" asp-action="LeftJoinPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Left Join
-                </a>
-                <a asp-controller="Home" asp-action="RightJoinPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Right Join
-                </a>
-                <a asp-controller="Home" asp-action="FullJoinPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Full Join
-                </a>
-                <a asp-controller="Home" asp-action="UnionPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Union
-                </a>
-                <a asp-controller="Home" asp-action="SelectIntoPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Select Into
-                </a>
-                <a asp-controller="Home" asp-action="InsertIntoSelectPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Insert Into Select
-                </a>
-                <a asp-controller="Home" asp-action="CreateDbPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Create DB
-                </a>
-                <a asp-controller="Home" asp-action="CreateTable">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Create Table
-                </a>
-                <a asp-controller="Home" asp-action="ConstraintsPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Constraints
-                </a>
-                <a asp-controller="Home" asp-action="NotNullPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Not Null
-                </a>
-                <a asp-controller="Home" asp-action="UniquePage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Unique
-                </a>
-                <a asp-controller="Home" asp-action="PrimaryKeyPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Primary Key
-                </a>
-                <a asp-controller="Home" asp-action="ForeignKeyPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Foreign Key
-                </a>
-                <a asp-controller="Home" asp-action="CheckPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Check
-                </a>
-                <a asp-controller="Home" asp-action="DefaultPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Default
-                </a>
-                <a asp-controller="Home" asp-action="CreateIndexPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Create Index
-                </a>
-                <a asp-controller="Home" asp-action="DropPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Drop
-                </a>
-                <a asp-controller="Home" asp-action="AlterPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Alter
-                </a>
-                <a asp-controller="Home" asp-action="AutoIncrementPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Auto Increment(Artan numara)
-                </a>
-                <a asp-controller="Home" asp-action="ViewsPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Views
-                </a>
-                <a asp-controller="Home" asp-action="DateFunctionsPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Tarih Fonksiyonları
-                </a>
-                <a asp-controller="Home" asp-action="DateFormatPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Date_Format
-                </a>
-                <a asp-controller="Home" asp-action="ConvertPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Convert
-                </a>
-                <a asp-controller="Home" asp-action="FindNullValuesPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Null Değerleri Bulma
-                </a>
-                <a asp-controller="Home" asp-action="NullFunctionsPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Null Functions
-                </a>
-                <a asp-controller="Home" asp-action="AvgFunctionPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Avg()
-                </a>
-                <a asp-controller="Home" asp-action="CountFunctionPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Count()
-                </a>
-                <a asp-controller="Home" asp-action="FirstFunctionPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    First()
-                </a>
-                <a asp-controller="Home" asp-action="LastFunctionPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Last()
-                </a>
-                <a asp-controller="Home" asp-action="MaxFunctionPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Max()
-                </a>
-                <a asp-controller="Home" asp-action="MinFunctionPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Min()
-                </a>
-                <a asp-controller="Home" asp-action="SumFunctionPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Sum()
-                </a>
-                <a asp-controller="Home" asp-action="GroupByFunctionPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Group By()
-                </a>
-                <a asp-controller="Home" asp-action="HavingPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Having
-                </a>
-                <a asp-controller="Home" asp-action="UcaseUpperFunctionPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Ucase()-Upper()
-                </a>
-                <a asp-controller="Home" asp-action="LcaseLoewerFunctionPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Lcase()-Lower()
-                </a>
-                <a asp-controller="Home" asp-action="MidFunctionPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Mid()
-                </a>
-                <a asp-controller="Home" asp-action="LenFunctionPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Len()
-                </a>
-                <a asp-controller="Home" asp-action="RoundFunctionPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Round()
-                </a>
-                <a asp-controller="Home" asp-action="NowFunctionPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Now()
-                </a>
-                <a asp-controller="Home" asp-action="FormatFunctionPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Format()
-                </a>
-                <a asp-controller="Home" asp-action="ReplaceFunctionPage">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    Replace()
-                </a>
-
-            </aside>
         </div>
-        <div class="main col-8">
-            @RenderBody()
 
-        </div>
-        <div class="mainright col-2">
-            <advertisingside>
 
-            </advertisingside>
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+
+            <div class="inner">
+
+                <!-- Search Box -->
+                <section id="search" class="alt">
+                    <form method="get" action="#">
+                        <input type="text" name="search" id="search" placeholder="Search..." />
+                    </form>
+                </section>
+
+                <!-- Menu -->
+                <nav id="menu">
+                    <ul>
+                        <li><a asp-controller="Home" asp-action="Index">Homepage</a></li>
+                        <li> <a asp-controller="Home" asp-action="SqlUsagePage">SQL Kullanımı</a></li>
+                        <li> <a asp-controller="Home" asp-action="GeneralDataTypesPage">Genel Data Tipleri</a></li>
+                        <li> <a asp-controller="Home" asp-action="DbDataTypesPage">DB Data Tipleri</a></li>
+                        <li> <a asp-controller="Home" asp-action="SelectPage">Select</a></li>
+                        <li> <a asp-controller="Home" asp-action="DistinctPage">Distinct</a></li>
+                        <li> <a asp-controller="Home" asp-action="WherePage">Where</a></li>
+                        <li> <a asp-controller="Home" asp-action="AndOrUsePage">And & Or Kullanımı</a></li>
+                        <li> <a asp-controller="Home" asp-action="OrderByPage">Order By</a></li>
+                        <li><a asp-controller="Home" asp-action="InsertIntoPage">Insert Into</a></li>
+                        <li> <a asp-controller="Home" asp-action="UpdatePage">Update</a></li>
+                        <li> <a asp-controller="Home" asp-action="DeletePage">Delete</a></li>
+                        <li> <a asp-controller="Home" asp-action="SelectTopPage">Select Top (Limit)</a></li>
+                        <li> <a asp-controller="Home" asp-action="LikePage">Like</a></li>
+                        <li> <a asp-controller="Home" asp-action="LikeMarksPage">Like işaretleri</a></li>
+                        <li><a asp-controller="Home" asp-action="InPage">In</a></li>
+                        <li> <a asp-controller="Home" asp-action="BetweenPage">Between</a></li>
+                        <li> <a asp-controller="Home" asp-action="AliasesPage">Aliases (AS Kullanımı)</a></li>
+                        <li> <a asp-controller="Home" asp-action="InnerJoinPage">Inner Join</a></li>
+                        <li> <a asp-controller="Home" asp-action="LeftJoinPage">Left Join</a></li>
+                        <li> <a asp-controller="Home" asp-action="RightJoinPage">Right Join</a></li>
+                        <li> <a asp-controller="Home" asp-action="FullJoinPage">Full Join</a></li>
+                        <li> <a asp-controller="Home" asp-action="UnionPage">Union</a></li>
+                        <li> <a asp-controller="Home" asp-action="SelectIntoPage">Select Into</a></li>
+                        <li> <a asp-controller="Home" asp-action="InsertIntoSelectPage">Insert Into Select</a></li>
+                        <li> <a asp-controller="Home" asp-action="CreateDbPage">Create DB</a></li>
+                        <li> <a asp-controller="Home" asp-action="CreateTable">Create Table</a></li>
+                        <li> <a asp-controller="Home" asp-action="ConstraintsPage">Constraints</a></li>
+                        <li> <a asp-controller="Home" asp-action="NotNullPage">Not Null</a></li>
+                        <li> <a asp-controller="Home" asp-action="UniquePage">Unique</a></li>
+                        <li> <a asp-controller="Home" asp-action="PrimaryKeyPage">Primary Key</a></li>
+                        <li> <a asp-controller="Home" asp-action="ForeignKeyPage">Foreign Key</a></li>
+                        <li> <a asp-controller="Home" asp-action="CheckPage">Check</a></li>
+                        <li> <a asp-controller="Home" asp-action="DefaultPage">Default</a></li>
+                        <li><a asp-controller="Home" asp-action="CreateIndexPage">Create Index</a></li>
+                        <li> <a asp-controller="Home" asp-action="DropPage">Drop</a></li>
+                        <li> <a asp-controller="Home" asp-action="AlterPage">Alter</a></li>
+                        <li> <a asp-controller="Home" asp-action="AutoIncrementPage">Auto Increment(Artan numara)</a></li>
+                        <li> <a asp-controller="Home" asp-action="ViewsPage">Views</a></li>
+                        <li> <a asp-controller="Home" asp-action="DateFunctionsPage">Tarih Fonksiyonları</a></li>
+                        <li> <a asp-controller="Home" asp-action="DateFormatPage">Date_Format</a></li>
+                        <li> <a asp-controller="Home" asp-action="ConvertPage">Convert</a></li>
+                        <li> <a asp-controller="Home" asp-action="FindNullValuesPage">Null Değerleri Bulma</a></li>
+                        <li> <a asp-controller="Home" asp-action="NullFunctionsPage">Null Functions</a></li>
+                        <li> <a asp-controller="Home" asp-action="AvgFunctionPage">Avg()</a></li>
+                        <li> <a asp-controller="Home" asp-action="CountFunctionPage">Count()</a></li>
+                        <li> <a asp-controller="Home" asp-action="FirstFunctionPage">First()</a></li>
+                        <li> <a asp-controller="Home" asp-action="LastFunctionPage">Last()</a></li>
+                        <li> <a asp-controller="Home" asp-action="MaxFunctionPage">Max()</a></li>
+                        <li> <a asp-controller="Home" asp-action="MinFunctionPage">Min()</a></li>
+                        <li> <a asp-controller="Home" asp-action="SumFunctionPage">Sum()</a></li>
+                        <li> <a asp-controller="Home" asp-action="GroupByFunctionPage">Group By()</a></li>
+                        <li> <a asp-controller="Home" asp-action="HavingPage">Having</a></li>
+                        <li> <a asp-controller="Home" asp-action="UcaseUpperFunctionPage">Ucase()-Upper()</a></li>
+                        <li> <a asp-controller="Home" asp-action="LcaseLoewerFunctionPage">Lcase()-Lower()</a></li>
+                        <li> <a asp-controller="Home" asp-action="MidFunctionPage">Mid()</a></li>
+                        <li> <a asp-controller="Home" asp-action="LenFunctionPage">Len()</a></li>
+                        <li> <a asp-controller="Home" asp-action="RoundFunctionPage">Round()</a></li>
+                        <li> <a asp-controller="Home" asp-action="NowFunctionPage">Now()</a></li>
+                        <li> <a asp-controller="Home" asp-action="FormatFunctionPage">Format()</a></li>
+                        <li> <a asp-controller="Home" asp-action="ReplaceFunctionPage">Replace()</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Featured Posts -->
+                <div class="featured-posts">
+                    <div class="heading">
+                        <h2>Featured Posts</h2>
+                    </div>
+                    <div class="owl-carousel owl-theme">
+                        <a href="#">
+                            <div class="featured-item">
+                                <img src="~/assets/images/featured_post_01.jpg" alt="featured one">
+                                <p>Aliquam egestas convallis eros sed gravida. Curabitur consequat sit.</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="featured-item">
+                                <img src="~/assets/images/left-image.jpg" alt="featured two">
+                                <p>Donec a scelerisque massa. Aliquam non iaculis quam. Duis arcu turpis.</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="featured-item">
+                                <img src="~/assets/images/featured_post_01.jpg" alt="featured three">
+                                <p>Suspendisse ac convallis urna, vitae luctus ante. Donec sit amet.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <footer id="footer">
+                    <p class="copyright">
+                        Copyright &copy; 2019 Company Name
+                        <br>Designed by <a rel="nofollow" href="https://www.facebook.com/templatemo">Template Mo</a>
+                    </p>
+                </footer>
+
+            </div>
         </div>
     </div>
 
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/assets/js/LayoutJs/jquery.min.js"></script>
+    <script src="~/assets/js/LayoutJs/bootstrap.bundle.min.js"></script>
 
+    <script src="~/assets/js/LayoutJs/browser.min.js"></script>
+    <script src="~/assets/js/LayoutJs/breakpoints.min.js"></script>
+    <script src="~/assets/js/LayoutJs/transition.js"></script>
+    <script src="~/assets/js/LayoutJs/owl-carousel.js"></script>
+    <script src="~/assets/js/LayoutJs/custom.js"></script>
 
-    <footer>
-        <advertisingsbottom>
-
-        </advertisingsbottom>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="~/assets/js/CopyButtonTR/CoppyButtonsTr.js"></script>
-
+    <script src="https://kit.fontawesome.com/64380cde43.js" crossorigin="anonymous"></script>
 </body>
+
+
 </html>

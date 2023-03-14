@@ -193,12 +193,64 @@
       "PackagePath": "staticwebassets\\assets\\css\\aside.css"
     },
     {
+      "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\css\\fontawesome.css",
+      "PackagePath": "staticwebassets\\assets\\css\\fontawesome.css"
+    },
+    {
+      "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\css\\owl.css",
+      "PackagePath": "staticwebassets\\assets\\css\\owl.css"
+    },
+    {
       "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\css\\site.css",
       "PackagePath": "staticwebassets\\assets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\css\\templatemo-style.css",
+      "PackagePath": "staticwebassets\\assets\\css\\templatemo-style.css"
+    },
+    {
+      "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\images\\featured_post_01.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\featured_post_01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\images\\left-image.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\left-image.jpg"
+    },
+    {
       "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\js\\CopyButtonTR\\CoppyButtonsTr.js",
       "PackagePath": "staticwebassets\\assets\\js\\CopyButtonTR\\CoppyButtonsTr.js"
+    },
+    {
+      "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\js\\LayoutJs\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\LayoutJs\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\js\\LayoutJs\\breakpoints.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\LayoutJs\\breakpoints.min.js"
+    },
+    {
+      "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\js\\LayoutJs\\browser.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\LayoutJs\\browser.min.js"
+    },
+    {
+      "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\js\\LayoutJs\\custom.js",
+      "PackagePath": "staticwebassets\\assets\\js\\LayoutJs\\custom.js"
+    },
+    {
+      "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\js\\LayoutJs\\jquery.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\LayoutJs\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\js\\LayoutJs\\owl-carousel.js",
+      "PackagePath": "staticwebassets\\assets\\js\\LayoutJs\\owl-carousel.js"
+    },
+    {
+      "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\js\\LayoutJs\\transition.js",
+      "PackagePath": "staticwebassets\\assets\\js\\LayoutJs\\transition.js"
     },
     {
       "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\favicon.ico",
