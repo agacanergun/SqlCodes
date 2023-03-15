@@ -1,8 +1,119 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "GeneralDataTypesPage";
     Layout = "~/Views/Shared/_LayoutTR.cshtml";
 }
 
-<h1>GeneralDataTypesPage</h1>
+<!-- Page Heading -->
+<div class="page-heading">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>SQL Genel Data Tipi</h1>
+                <p>
+                    Tablo üzerindeki her bir alanın bir veri tipi vardır. Veritabanını tasarlarken hangi alanın hangi veri tipinde olduğunu belirlemek oldukça önemlidir. 
+                    Daha sonra bir alandan veri çekmek istenirse alanın tipine göre veri çekme işlemi gerekecektir.
+                    Aşağıdaki listede genel olarak kullanılan data tiplerini görebilirsiniz.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 
+
+
+<!-- Tables -->
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h2>Tables</h2>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Data Tipi</th>
+                                <th>İşlemi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#CHARACTER(n)</td>
+                                <td>Metin tipinde n ile belirtilen sayı kadar karakter depolar. n ile belirtilenden az karakter girilmiş olsa bile n kadar yer kullanılır.</td>
+                            </tr>
+                            <tr>
+                                <td>#VARCHAR(n) or CHARACTER VARYING(n)</td>
+                                <td>En fazla n ile belirtilen kadar karakteryer kaplar. Girilen veri n değerinden az ise sadece girildiği kadar alan kaplar.</td>
+                            </tr>
+                            <tr>
+                                <td>#BINARY(n)</td>
+                                <td>Metinsel olarak Binary değerleri n ile belirtilen kadar depolar. n değerinden az karakter girilse de n kadar yer kullanılır.</td>
+                            </tr>
+                            <tr>
+                                <td>#BOOLEAN</td>
+                                <td>TRUE - FALSE , VAR - YOK gibi sadece iki durumun varlığında kullanılır.</td>
+                            </tr>
+                            <tr>
+                                <td>#VARBINARY(n) or BINARY VARYING(n)</td>
+                                <td>Metinsel olarak Binary değerleri en fazla n ile belirtilen kadar depolar. Veri n değerinden az ise sadece girildiği kadar alan kaplar.</td>
+                            </tr>
+                            <tr>
+                                <td>#INTEGER</td>
+                                <td>Tam sayı olarak numarasal değerleri depolar. Virgüllü değerleri kabul etmez. 4 byte alan kaplar. -2.147.483.648 ile 2.147.438.647 arası değerlerde kullanılır.</td>
+                            </tr>
+                            <tr>
+                                <td>#SMALLINT</td>
+                                <td>Küçük tam sayı değerlerini depolar. Virgüllü değerleri kabul etmez. 2 byte yer kaplar. -32.768 ile 32.767 arası değerlerde kullanılır.</td>
+                            </tr>
+                            <tr>
+                                <td>#TINYINT</td>
+                                <td>Mini tam sayı değerlerini depolar. Virgüllü değerleri kabul etmez. 1 byte yer kaplar. 0-255 arası değerlerde kullanılır. Bu komut ile mevcut kayıtlar üzerinde işlem yapılmaz.</td>
+                            </tr>
+                            <tr>
+                                <td>#BIGINT</td>
+                                <td>Büyük tam sayıları depolamak için kullanılır. Virgüllü değerleri kabul etmez. 8 byte alan kaplar. -2.147.483.648 ile 2.147.438.647 arası değerlerde kullanılır. -9.223.372.036.854.775.808 ile -9.223.372.036.854.775.807 arası değerlerde kullanılır.</td>
+                            </tr>
+                            <tr>
+                                <td>#DECIMAL(p,s)</td>
+                                <td>Virgüllü değerlerde kullanılır.. Örneğin: decimal(5,2) ifadesinde toplam 5 tane rakam olduğunu söylenmiş. Bunun 2 tanesi virgülden sonra olaak belirtilmiş. Tam sayı kısmına ise 3 rakam girilebilir.</td>
+                            </tr>
+                             <tr>
+                                <td>#NUMERIC(p,s)</td>
+                                <td>DECIMAL veri tipi ile aynı özelliklere sahiptir. Bazı sistemler sadece Numeric alanı kullanır.</td>
+                            </tr>
+                            <tr>
+                                <td>#FLOAT(p)</td>
+                                <td>Virgüllü değerleri yuvarlayarak kayıt eder. p ile hafızada tutulmak istenen byte değeri belirtilir. girilen değer 5 byte'tan fazla ise sadece 5 byte'lık kısmı yuvarlanarak kaydedilir.</td>
+                            </tr>
+                            <tr>
+                                <td>#REAL</td>
+                                <td>4 byte yer tutar. Aynı zamanda Float(24) ile aynı işi yapar. Ancak bu tipte virgüllü sayıları aklayabilirsiniz.</td>
+                            </tr>
+                             <tr>
+                                <td>#DATE</td>
+                                <td>Yıl, ay, gün olarak tarih depolar.</td>
+                            </tr>
+                            <tr>
+                                <td>#TIME</td>
+                                <td>Saat, dakika ve saniye olarak veri depolar.</td>
+                            </tr>
+                            <tr>
+                                <td>#TIMESTAMP</td>
+                                <td>Yıl, ay, gün, saat, dakika ve saniye olarak veri depolar.</td>
+                            </tr>
+                            <tr>
+                                <td>#MULTISET</td>
+                                <td>A variable-length and unordered collection of elements.</td>
+                            </tr>
+                             <tr>
+                                <td>#XML</td>
+                                <td>XML tipinde verileri depolar.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
