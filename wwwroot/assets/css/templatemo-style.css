@@ -111,7 +111,7 @@ section {
 	padding-right: 0px;
 }
 .main-banner .banner-content {
-	background-image: url(../images/main-banner.jpg);
+	background-image: url(../images/sql.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -185,45 +185,24 @@ section {
 }
 
 .services .first-item .icon {
-	background-image: url(../images/icon_01.png);
+	background-image: url(../images/icons/icon_01.png);
 }
 .services .first-item:hover .icon {
-	background-image: url(../images/icon_hover_01.png);
-}
-
-.services .second-item .icon {
-	background-image: url(../images/icon_02.png);
-}
-.services .second-item:hover .icon {
-	background-image: url(../images/icon_hover_02.png);
+	background-image: url(../images/icons/icon_hover_01.png);
 }
 
 .services .third-item .icon {
-	background-image: url(../images/icon_03.png);
+	background-image: url(../images/icons/icon_03.png);
 }
 .services .third-item:hover .icon {
-	background-image: url(../images/icon_hover_03.png);
-}
-
-.services .fourth-item .icon {
-	background-image: url(../images/icon_04.png);
-}
-.services .fourth-item:hover .icon {
-	background-image: url(../images/icon_hover_04.png);
+	background-image: url(../images/icons/icon_hover_03.png);
 }
 
 .services .fivth-item .icon {
-	background-image: url(../images/icon_05.png);
+	background-image: url(../images/icons/icon_05.png);
 }
 .services .fivth-item:hover .icon {
-	background-image: url(../images/icon_hover_05.png);
-}
-
-.services .sixth-item .icon {
-	background-image: url(../images/icon_06.png);
-}
-.services .sixth-item:hover .icon {
-	background-image: url(../images/icon_hover_06.png);
+	background-image: url(../images/icons/icon_hover_05.png);
 }
 
 .services .service-item:hover {

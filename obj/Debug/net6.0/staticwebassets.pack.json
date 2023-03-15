@@ -185,14 +185,6 @@
       "PackagePath": "staticwebassets\\assets\\css\\Table.css"
     },
     {
-      "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\css\\advertisingside.css",
-      "PackagePath": "staticwebassets\\assets\\css\\advertisingside.css"
-    },
-    {
-      "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\css\\aside.css",
-      "PackagePath": "staticwebassets\\assets\\css\\aside.css"
-    },
-    {
       "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\assets\\css\\bootstrap.min.css"
     },
@@ -213,12 +205,48 @@
       "PackagePath": "staticwebassets\\assets\\css\\templatemo-style.css"
     },
     {
+      "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\images\\Advertising\\midAdvertising.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\Advertising\\midAdvertising.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\images\\Advertising\\smallAdvertising.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\Advertising\\smallAdvertising.jpg"
+    },
+    {
       "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\images\\featured_post_01.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\featured_post_01.jpg"
     },
     {
+      "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\images\\icons\\icon_01.png",
+      "PackagePath": "staticwebassets\\assets\\images\\icons\\icon_01.png"
+    },
+    {
+      "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\images\\icons\\icon_03.png",
+      "PackagePath": "staticwebassets\\assets\\images\\icons\\icon_03.png"
+    },
+    {
+      "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\images\\icons\\icon_05.png",
+      "PackagePath": "staticwebassets\\assets\\images\\icons\\icon_05.png"
+    },
+    {
+      "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\images\\icons\\icon_hover_01.png",
+      "PackagePath": "staticwebassets\\assets\\images\\icons\\icon_hover_01.png"
+    },
+    {
+      "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\images\\icons\\icon_hover_03.png",
+      "PackagePath": "staticwebassets\\assets\\images\\icons\\icon_hover_03.png"
+    },
+    {
+      "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\images\\icons\\icon_hover_05.png",
+      "PackagePath": "staticwebassets\\assets\\images\\icons\\icon_hover_05.png"
+    },
+    {
       "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\images\\left-image.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\left-image.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\images\\sql.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\sql.jpg"
     },
     {
       "Id": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\js\\CopyButtonTR\\CoppyButtonsTr.js",
