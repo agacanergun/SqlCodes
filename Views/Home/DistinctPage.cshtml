@@ -1,8 +1,302 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "DistinctPage";
     Layout = "~/Views/Shared/_LayoutTR.cshtml";
 }
 
-<h1>DistinctPage</h1>
+<!-- Page Heading -->
+<div class="page-heading">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>SQL DISTINCT Kullanımı</h1>
+                <p>
+                    DISTINCT ifadesi tablodaki belirtilen alanda bulunan kayıtlardan birer örnek alır. Yani tekrar eden kayıtlardan bir tane alır ve bunun yanına da tekrar etmeyen kayıtları koyarak bir veri kümesi oluşturur. Ne işimize yarar veya nerede kullanabiliriz sorusu akla gelebilir.
+                </p>
+                <p>
+                    Mesela bir üyelerinizin depolandığı bir tablo olduğunu düşünün. Bu tablodan mesela İstanbul'da kaç tane üyeniz olduğunu bulmak istediğinizi düşünün. Yaptığınız programa bir açılır liste kutusu koyup illerin isimlerini tek tek yazabilirsiniz. Ancak bu durum hem bir zaman kaybı olur hemde sistemde kayıtlı olmayan ileri de listeleyeceği için, açılır liste kutusu açıldığında uzun bir liste olacaktır. Bunun yerine Distinct komutu kullanarak tablodaki Şehir alanında yazan kayıtlar tek düşürülür ve bir açılır liste kutusuna aktarılabilir. Böylece ilgili şehir seçilerek o şehirde kaç tane üyenizin olduğunu görebilirsiniz. Listede görünmeyen şehirden üyeniz olmadığı anlamını rahatlıkla çıkarabilirsiniz.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 
+
+<br />
+<h3>Distinct Kullanım Biçimi</h3>
+<p>Eğer bütün alanlardan veri çekeceksek, Select ifadesinden sonra * işareti konulur. Böylece bütün alanlardan veri çekileceği belirtilmiş olunur.</p>
+<div class="TxtClipBoard">
+    <div class="ClipBoardButton">
+        <button id="CopyButton1" style="border: none; background-color: #B0C4DE; color:azure;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+
+            </svg>
+        </button>
+    </div>
+    <div class="Highlight" id="test1">
+        <pre tabindex="0" class="chroma">
+        <code class="langueage-html" data-lang="html"><br />
+        <span><strong>SELECT DISTINCT alan_adi1,alan_adi2</strong></span>
+        <span><strong>FROM tablo_adi</strong></span>
+            </code>
+        </pre>
+    </div>
+</div>
+
+
+<!-- Exmaples -->
+<section class="top-image">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="down-content">
+                    <p>
+                        Distinct kelimesinden sonra yazılacak olan alanlara otomatik olarak uygulanır. Yani birden fazla alan üzerinde Distinct yapılacaksa alanların başına tek tek yazılmaz. Ayrıca Distinct komutu tek başına kullanılamaz. Mutlaka SELECT ifadesi ile kullanılmalıdır.
+                    </p>
+                    <p>
+                        Burada dikkat edilmesi gereken nokta çoklu distinct kullanımında belirtilen alanlardaki verileri bir bütün olarak ele alır ve diğer kayırlarda benzersiz alanları bulmaya çalışır. (örnek2 ve örnek3'e bakabilirisiniz.)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Tables -->
+
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h3>Örnek Tablo Uygulaması:</h3>
+                    <p>Örnek olarak aşağıdaki gibi Personel isimli tablomuz olsun.</p>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Adi_Soyadi</th>
+                                <th>Sehir</th>
+                                <th>Bolum</th>
+                                <th>Meslek_Kodu</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Cengiz Ayhan</td>
+                                <td>İstanbul</td>
+                                <td>Bilgi İşlem Sorumlusu</td>
+                                <td>1234567</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Ahmet Bilge</td>
+                                <td>Kocaeli</td>
+                                <td>İdari İşler Yöneticisi</td>
+                                <td>2345678</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Mehmet Kıran</td>
+                                <td>Erzincan</td>
+                                <td>Muhasebe</td>
+                                <td>3456789</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Efe Kıran</td>
+                                <td>İstanubl</td>
+                                <td>Bilgi İşlem Sorumlusu</td>
+                                <td>2345678</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tables -->
+
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h2>Örnek1:</h2>
+                    <p><strong>SELECT DISTINCT Sehir FROM Personel </strong></p>
+                    <p>Bu kod ile tablodaki Sehir alanında bulunan kayıtları birer defa alır.</p>
+                    <h3>Çıktısı:</h3>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Sehir</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>İstanbul</td>
+                            </tr>
+                            <tr>
+                                <td>Kocaeli</td>
+                            </tr>
+                            <tr>
+                                <td>Erzincan</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Tables -->
+
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h2>Örnek2:</h2>
+                    <p><strong>SELECT DISTNICT Sehir, Bolum FROM Personel </strong></p>
+                    <p>Bu örnekte Personel tabosundan adı soyadı ve bölüm bilgisinin tutulduğu alanlar seçilmektedir. Ancak burada dikkat edilmesi gereken nokta iki alanın sanki tek bir alanmış gibi değelendirilmesidir.</p>
+                    <h3>Çıktısı:<h3>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Sehir</th>
+                                <th>Bolum</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>İstanbul</td>
+                                <td>Bilgi İşlem Sorumlusu</td>
+                            </tr>
+                            <tr>
+                                <td>Kocaeli</td>
+                                <td>İdari İşler Yöneticisi</td>
+                            </tr>
+                            <tr>
+                                <td>Erzincan</td>
+                                <td>Muhasebek</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<p>Burada dikkat edeceğiniz üzere tablomuzdaki son satırı almadı. Çünkü Sehir ve Bolum alanlarını tek bir alanmış gibi düşündüğümüz zaman "İstanbul Bilgi İşlem Sorumlusu" ifadesi ortaya çıkar. Son satırdaki kayıtta aynı ifadeye denk gelmektedir. Bu sebeple dikkate alınmadı.</p>
+
+
+
+<!-- Tables -->
+
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h2>Örnek3:</h2>
+                    <p><strong>SELECT DISTNICT Sehir, Bolum, Meslek_Kodu FROM Personel</strong></p>
+                    <p>Bu örnekte Personel tabosundan adı soyadı ve bölüm bilgisinin tutulduğu alanlar seçilmektedir. Ancak burada dikkat edilmesi gerekn nokta iki alanın sanki tek bir alanmş gibi değelendirilmesidir.</p>
+                    <h3>Çıktısı:<h3>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Sehir</th>
+                                <th>Bolum</th>
+                                <th>Meslek_Kodu</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>İstanbul</td>
+                                <td>Bilgi İşlem Sorumlusu</td>
+                                <td>1234567</td>
+                            </tr>
+                            <tr>
+                                <td>Kocaeli</td>
+                                <td>İdari İşler Yöneticisi</td>
+                                <td>2345678</td>
+                            </tr>
+                            <tr>
+                                <td>Erzincan</td>
+                                <td>Muhasebek</td>
+                                <td>3456789</td>
+                            </tr>
+                            <tr>
+                                <td>İstanbul</td>
+                                <td>Bilgi İşlem Sorumlusu</td>
+                                <td>2345678</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>Bu örnekte ise bütün kayıtlar gelmiş oldu.  Çünkü Sehir, Bolum ve Meslek_kodu alanlarını tek bir alanmış gibi düşündüğümüz zaman; ilk satırı örnek verecek olursak "İstanbul Bilgi İşlem Sorumlusu 1234567" ifadesi ortaya çıkar. Sehir alanında iki tane İstanbul olmasına rağmen ikiside listelenmiştir. Çünkü iki kaydın Meslek_Kodu alanında yazan değer farklıdır.</p>
+</section>
+
+<!-- Tables -->
+
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h2>Aynı tabloyu aşağıdaki kod ile çalıştırdığımız zaman:</h2>
+                    <p><strong>Select Distinct Bolum, Meslek_kodu FROM Personel</strong></p>
+                    <h3>Çıktısı:<h3>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Bolum</th>
+                                <th>Meslek_Kodu</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Bilgi İşlem Sorumlusu</td>
+                                <td>1234567</td>
+                            </tr>
+                            <tr>
+                                <td>İdari İşler Yöneticisi</td>
+                                <td>2345678</td>
+                            </tr>
+                            <tr>
+                                <td>Muhasebek</td>
+                                <td>3456789</td>
+                            </tr>
+                            <tr>
+                                <td>Bilgi İşlem Sorumlusu</td>
+                                <td>2345678</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>Dikkat edileceği üzere Bilgi İşlem Sorumlusu alanı iki defa gelmiş oldu. Aynı mantıktan yola çıakrak alanların birleştirilmiş olduğunu düşünürsek, Bilgi İşlem Sorumlusu kayıtlarında Meslek_Kodu alanında 1234567 ve 2345678 verileri vardır. Dolayısı ile bu iki satır benzersiz değildir.</p>
+</section>
