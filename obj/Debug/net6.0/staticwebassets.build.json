@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yjhtnDKh310kdy4BD7+hEsnLPjZ2KFoXPF+oxl7ryFw=",
+  "Hash": "M5RTa0XRjQpd6E+7kYyGtslVZPH4C8GSTmB50TUuDUQ=",
   "Source": "SqlCodes",
   "BasePath": "_content/SqlCodes",
   "Mode": "Default",
@@ -848,23 +848,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\css\\site.css"
-    },
-    {
-      "Identity": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\css\\Table.css",
-      "SourceId": "SqlCodes",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\",
-      "BasePath": "_content/SqlCodes",
-      "RelativePath": "assets/css/Table.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\css\\Table.css"
     },
     {
       "Identity": "C:\\Users\\MONSTER\\source\\repos\\SqlCodes\\SqlCodes\\wwwroot\\assets\\css\\templatemo-style.css",

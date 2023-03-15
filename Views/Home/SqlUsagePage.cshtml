@@ -3,82 +3,136 @@
     Layout = "~/Views/Shared/_LayoutTR.cshtml";
 }
 
-<h1>SqlUsagePage</h1>
-
-
-@*1*@
-<div class="TxtClipBoard">
-    <div class="ClipBoardButton">
-        <button id="CopyButton1" style="border: none; background-color: #2b3034; color:azure;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
-                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
-                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
-
-            </svg>
-        </button>
-    </div>
-    <div class="Highlight" id="test1">
-        <pre tabindex="0" class="chroma">
-        <code class="langueage-html" data-lang="html"><br />
-        <span>Satır1</span>
-        <span>Satır2</span>
-        <span>Satır3</span>
-        <span>Satır4</span>
-        <span>Satır5</span>
-            </code>
-        </pre>
-    </div>
-</div>
-
-
-
-
-@*tablo*@
-
-<div class="container">
-    <div class="table">
-        <div class="table-header">
-            <div class="header-item-left"><h5 id="name" class="filter__link" style="width:25%">Komut</h5></div>
-            <div class="header-item-right"><h5 id="wins" class="filter__link filter__link--number" style="width:75%">İşlevi</h5></div>
-        </div>
-        <div class="table-content">
-            <div class="table-row">
-                <div class="table-data-left">Select</div>
-                <div class="table-data-right"> Veritabanından verileri okumak için kullanılır.</div>
-            </div>
-            <div class="table-row">
-                <div class="table-data-left">Update</div>
-                <div class="table-data-right">Veritabanındaki var olan bir kaydın bilgilerini güncellemede kullanılır. Örneğin yaşadığı şehir alanı İstanbul olanları Ankara'ya çeviremek gibi.</div>
-            </div>
-            <div class="table-row">
-                <div class="table-data-left">Delete</div>
-                <div class="table-data-right">Veritabanındaki bir kaydı silme için kullanılır.</div>
-            </div>
-            <div class="table-row">
-                <div class="table-data-left">Insert Into</div>
-                <div class="table-data-right">Veritabanına yeni bir kayıt eklemek için kullanılır.</div>
-            </div>
-            <div class="table-row">
-                <div class="table-data-left">Create Database</div>
-                <div class="table-data-right"> Yeni bir veritabanı oluşturmak için kullanılır.</div>
-            </div>
-            <div class="table-row">
-                <div class="table-data-left">Alter Database</div>
-                <div class="table-data-right">Mevcut veritabanı özelliklerinde değişiklik yapmak için kullanılır.</div>
-            </div>
-            <div class="table-row">
-                <div class="table-data-left">Create Table</div>
-                <div class="table-data-right">Veritabanına yeni bir tablo eklemek için kullanılır.</div>
-            </div>
-            <div class="table-row">
-                <div class="table-data-left">Alter Table</div>
-                <div class="table-data-right">Mevcut tablo özelliklerinde işlem yapmak için kullanılır. Bu komut ile mevcut kayıtlar üzerinde işlem yapılmaz.</div>
-            </div>
-            <div class="table-row">
-                <div class="table-data-left">Drop Table</div>
-                <div class="table-data-right">Veritabanı içindeki bir tabloyu silmek için kullanılır. Bu işlem ile ilgili tablodaki kayıtlar da silinir.</div>
+<!-- Page Heading -->
+<div class="page-heading">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>SQL Kullanımı Hakkında</h1>
+                <p>
+                    SQL dili veritbanlarındaki tablolara bağlanıp veri eklemek, daha önceden eklenen verileri okumak ve veriler üzerinde işlem yapmak
+                    (güncelleme, silme) için kullanılan bir dildir.<strong>
+                        Sorgulama yapabilmek için öncelikli olarak veritabanımızda ez azından bir tablo olması
+                        gerekmektedir.
+                    </strong>  Birden fazla tablo da olabilir. Ancak ister bir tablo olsun isterse birden çok tablo olsun neticede üzerinde işlem yapmak
+                    istediğimiz tabloyu belirtmemiz gerekmektedir.<strong> Hangi tablo üzerinde çalışacağımız FROM ifadesi ile belirtiriz.</strong> Bu ifade SQL sorgulama dilinin
+                    temelidir ve hemen hemen bütün SQL sorgularında kullanılmaktadır. Hemen hemen dedik çünkü bazı sorgu ifadelerinde kullanılmaz. Mesela yeni
+                    bir veritabanı veya tablo oluştururken FROM ifadesi kullanılmaz.<strong> FROM ifadesi sadece var olan verilerde sorgulama yaparken kullanılır.</strong>
+                    Tek başına FROM ifadesi tabiki yetmez. FROM ile hangi tablo üzerinde işlem yapacağımız belirtiriz ancak ilgili tabloda ekleme işlemi mi, silme
+                    işlemi mi veya güncelleme işlemi mi yaptığımızı da belirtmemiz gerekmektedir. Bunun için belli başlı işlemler için hangi özel komutun
+                    kullanıldığını aşağıdaki tabloda görebilirsiniz.
+                </p>
             </div>
         </div>
     </div>
 </div>
 
+
+
+<!-- Tables -->
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h2>Tables</h2>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Komut</th>
+                                <th>İşlemi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#Select</td>
+                                <td>Veritabanından verileri okumak için kullanılır.</td>
+                            </tr>
+                            <tr>
+                                <td>#Update</td>
+                                <td>Veritabanındaki var olan bir kaydın bilgilerini güncellemede kullanılır. Örneğin yaşadığı şehir alanı İstanbul olanları Ankara'ya çeviremek gibi.</td>
+                            </tr>
+                            <tr>
+                                <td>#Delete</td>
+                                <td>Veritabanındaki bir kaydı silme için kullanılır.</td>
+                            </tr>
+                            <tr>
+                                <td>#Insert Into</td>
+                                <td>Veritabanına yeni bir kayıt eklemek için kullanılır.</td>
+                            </tr>
+                            <tr>
+                                <td>#Create Database</td>
+                                <td>Yeni bir veritabanı oluşturmak için kullanılır.</td>
+                            </tr>
+                            <tr>
+                                <td>#Alter Database</td>
+                                <td>Mevcut veritabanı özelliklerinde değişiklik yapmak için kullanılır.</td>
+                            </tr>
+                            <tr>
+                                <td>#Create Table</td>
+                                <td>Veritabanına yeni bir tablo eklemek için kullanılır.</td>
+                            </tr>
+                            <tr>
+                                <td>#Alter Table</td>
+                                <td>Mevcut tablo özelliklerinde işlem yapmak için kullanılır. Bu komut ile mevcut kayıtlar üzerinde işlem yapılmaz.</td>
+                            </tr>
+                            <tr>
+                                <td>#Drop Table</td>
+                                <td>Veritabanı içindeki bir tabloyu silmek için kullanılır. Bu işlem ile ilgili tablodaki kayıtlar da silinir.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Exmaples -->
+<section class="top-image">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="down-content">
+                    <h4>Örnek1</h4>
+                    <p>
+                        Select * From Personel <strong>(Personel tablosundaki bütün kayıtları çeker.)</strong>
+                    </p>
+                    <p>
+                        Select Ad, Sehir From Personel <strong>(Personel tablosunda çok sayıda alan olabilir. Ancak bu komutla sadece Ad ve Sehir alanlarındaki kayıtları çekeriz.)</strong>
+                    </p>
+                    <p>
+                        Yukarıdaki örnekte görüleceği üzere öncelikli olarak hangi işlemin yapılacağı belirtiliyor. Daha sonra ise hangi alanlar için yapılacağı belirtiliyor ve son olarak hangi tablo üzerinde yapılacağı belirtiliyor.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Exmaples -->
+<section class="top-image">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="down-content">
+                    <h4>Örnek2</h4>
+                    <p>
+                        Select * From Personel Where Sehir='İstanbul'
+                    </p>
+                    <p>
+                        Select * From Personel Where Sehir='İstanbul' and Bolum='Bilgisayar'
+                    </p>
+                    <p>
+                        Birinci önekte Personel tablosundan Sehir alanında İstanbul yazan kayıtlar seçilmektedir. Tabloda 100 tane kayıt olabilir. Ancak bunlardan 20 tanesinin Sehir alanında İstanbul yazıyorsa, yazılan bu komut ile sadece 20 tane kayıt seçilip ekrana yazdırılabilir. İkinci örnekte ise Perosnel tablosundaki kayıtlarda Sehir alaninda İstanbul yazan ve Bolum alanında Bilgisayar yazan kayitler seçilip ekrana yazdırılabilir.
+                        Komutların detaylı kullanımları ile ilgili bilgileri sol taraftaki menüden seçerek görebilirsiniz. Bu bölümde temel olarak SQL yapısının nasıl işlediğini anlamanız yeterli olacaktır.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
