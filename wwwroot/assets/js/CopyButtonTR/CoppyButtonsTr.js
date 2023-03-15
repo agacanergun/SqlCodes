@@ -3,13 +3,13 @@
 var CopyButton1 = document.getElementById("CopyButton1");
 
 CopyButton1.addEventListener("mouseover", function () {
-    CopyButton1.style.color = "#00b4d8";
-    CopyButton1.style.backgroundColor = "#2b3034";
+    CopyButton1.style.color = "#010f12";
+    CopyButton1.style.backgroundColor = "#B0C4DE";
 });
 
 CopyButton1.addEventListener("mouseout", function () {
     CopyButton1.style.color = "#F0FFFF";
-    CopyButton1.style.backgroundColor = "#2b3034";
+    CopyButton1.style.backgroundColor = "#B0C4DE";
 });
 
 
@@ -40,13 +40,13 @@ copyButton1.addEventListener('click', () => {
 var CopyButton2 = document.getElementById("CopyButton2");
 
 CopyButton2.addEventListener("mouseover", function () {
-    CopyButton2.style.color = "#00b4d8";
-    CopyButton2.style.backgroundColor = "#2b3034";
+    CopyButton2.style.color = "#010f12";
+    CopyButton2.style.backgroundColor = "#B0C4DE";
 });
 
 CopyButton2.addEventListener("mouseout", function () {
     CopyButton2.style.color = "#F0FFFF";
-    CopyButton2.style.backgroundColor = "#2b3034";
+    CopyButton2.style.backgroundColor = "#B0C4DE";
 });
 
 
@@ -77,13 +77,13 @@ copyButton2.addEventListener('click', () => {
 var CopyButton3 = document.getElementById("CopyButton3");
 
 CopyButton3.addEventListener("mouseover", function () {
-    CopyButton3.style.color = "#00b4d8";
-    CopyButton3.style.backgroundColor = "#2b3034";
+    CopyButton3.style.color = "#010f12";
+    CopyButton3.style.backgroundColor = "#B0C4DE";
 });
 
 CopyButton3.addEventListener("mouseout", function () {
     CopyButton3.style.color = "#F0FFFF";
-    CopyButton3.style.backgroundColor = "#2b3034";
+    CopyButton3.style.backgroundColor = "#B0C4DE";
 });
 
 
@@ -113,13 +113,13 @@ copyButton3.addEventListener('click', () => {
 var CopyButton4 = document.getElementById("CopyButton4");
 
 CopyButton4.addEventListener("mouseover", function () {
-    CopyButton4.style.color = "#00b4d8";
-    CopyButton4.style.backgroundColor = "#2b3034";
+    CopyButton4.style.color = "#010f12";
+    CopyButton4.style.backgroundColor = "#B0C4DE";
 });
 
 CopyButton4.addEventListener("mouseout", function () {
     CopyButton4.style.color = "#F0FFFF";
-    CopyButton4.style.backgroundColor = "#2b3034";
+    CopyButton4.style.backgroundColor = "#B0C4DE";
 });
 
 //4

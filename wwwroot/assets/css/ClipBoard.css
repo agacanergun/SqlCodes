@@ -1,20 +1,18 @@
 ﻿.TxtClipBoard {
     height: max-content;
-    width: 80%;
     margin: auto;
 }
 
     .TxtClipBoard .ClipBoardButton {
-        background-color: #2b3034;
+        background-color: #B0C4DE;
         float: right;
         margin-right: 20px;
         margin-top: 14px;
     }
 
     .TxtClipBoard .Highlight {
-        border-radius: 18px;
-        background-color: #2b3034;
-        color: aliceblue;
+        border-radius: 5px;
+        background-color: #B0C4DE;
     }
 
 * {

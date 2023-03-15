@@ -1,8 +1,162 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "SelectPage";
     Layout = "~/Views/Shared/_LayoutTR.cshtml";
 }
 
-<h1>SelectPage</h1>
+<!-- Page Heading -->
+<div class="page-heading">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>SQL SELECT Kullanımı</h1>
+                <p>
+                    SELECT ifadesi veritbanından verileri okumak için kullanılır.
+                    Veritbanındaki tablo üzerindeki bütün alanlardan veri
+                    çekilebileceği gibi belirteceğimiz bir kaç alandan da veri
+                    çekebiliriz. En azından bir alan belirtmek gerekmektedir.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<br />
+<h3>Select Kullanım Biçimi</h3>
+<p>Eğer bütün alanlardan veri çekeceksek, Select ifadesinden sonra * işareti konulur. Böylece bütün alanlardan veri çekileceği belirtilmiş olunur.</p>
+<div class="TxtClipBoard">
+    <div class="ClipBoardButton">
+        <button id="CopyButton1" style="border: none; background-color: #B0C4DE; color:azure;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+
+            </svg>
+        </button>
+    </div>
+    <div class="Highlight" id="test1">
+        <pre tabindex="0" class="chroma">
+        <code class="langueage-html" data-lang="html"><br />
+        <span><strong>SELECT *</strong></span>
+        <span><strong>FROM tablo_adi</strong></span>
+            </code>
+        </pre>
+    </div>
+</div>
+<br />
+<p>Eğer birkaç tane alanlardan veri çekeceksek, Select ifadesinden sonra alanları virgüller ayırarak yazarız.</p>
+<div class="TxtClipBoard">
+    <div class="ClipBoardButton">
+        <button id="CopyButton2" style="border: none; background-color: #B0C4DE; color:azure;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+
+            </svg>
+        </button>
+    </div>
+    <div class="Highlight" id="test2">
+        <pre tabindex="0" class="chroma">
+        <code class="langueage-html" data-lang="html"><br />
+        <span><strong>SELECT alan_adi1, alan_adi2</strong></span>
+        <span><strong>FROM tablo_adi</strong></span>
+            </code>
+        </pre>
+    </div>
+</div>
+
+<!-- Tables -->
+
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h3>Örnek Tablo Uygulaması:</h3>
+                    <p>Örnek olarak aşağıdaki gibi Personel isimli tablomuz olsun.</p>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Adi_Soyadi</th>
+                                <th>Sehir</th>
+                                <th>Bolum</th>
+                                <th>Sicil No</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Cengiz Ayhan</td>
+                                <td>İstanbul</td>
+                                <td>Bilgi İşlem Sorumlusu</td>
+                                <td>1234567</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Ahmet Bilge</td>
+                                <td>İzmir</td>
+                                <td>İdari İşlem Sorumlusu</td>
+                                <td>5234567</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Mehmet Kıran</td>
+                                <td>Sivas</td>
+                                <td>İnsan Kaynakları Sorumlusu</td>
+                                <td>3234567</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Exmaples -->
+<section class="top-image">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="down-content">
+                    <h4>Örnek1</h4>
+                    <p>
+                        Select * From Personel <strong>(Personel tablosundaki bütün kayıtları çeker.)</strong>
+                    </p>
+                    <p>
+                        Bu kod ile tablodaki bütün alanlarda bulunan kayıtları seçmiş oluruz. Daha sonra bunu kullandığımız programlama ortamında ekrana yazdırırız.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Exmaples -->
+<section class="top-image">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="down-content">
+                    <h4>Örnek2</h4>
+                    <p>
+                        SELECT Adi_soyadi, Bolum FROM Personel
+                    </p>
+                    <p>
+                    Bu örnekte Personel tabosundan sadece adı soyadı ve bölüm bilgisinin tutulduğu alanlar seçilmektedir. Diğer alanlar işleme alınmaz. Kullandığımız programlama ortamına kayıtları aktarırken sadece bu iki alan dikkate alınacaktır. Eğer kullandığımız programlama ortamında Şehir bilgisine erişmek istersek hata alırız.
+                    </p>
+                    <p>Bütün programlama ortamlarında (ASP, PHP, .Net vb.) sorgu sonucu elde edilen veriler üzerinde ilk kayda gitme, önceki kayda gitme, sonraki kayda gitme ve en son kayda gitme gibi özel tanımlı komutlar vardır. Bu komutlar sayesinde Select ile elde edilen veriler üzerinde işlem yapılabilir.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
