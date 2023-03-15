@@ -1,8 +1,377 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "DbDataTypesPage";
     Layout = "~/Views/Shared/_LayoutTR.cshtml";
 }
 
-<h1>DbDataTypesPage</h1>
 
+
+<!-- Tables -->
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h1>Çeşitli Veritabanlarında Kullanılan Veri Tipleri</h1>
+                    <br />
+                    <h5>Microsoft Access, MySQL ve SQL Server'da kullanılan veri tipleri</h5>
+                    <br />
+                    <h2>Microsoft Access Veri Tipleri</h2>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Data Tipi</th>
+                                <th>İşlemi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#Text</td>
+                                <td>Metinsel verileri depolar. Girilen sayıları da metinsel olarak depoalr. En fazla 255 karakter alır.</td>
+                            </tr>
+                            <tr>
+                                <td>#Memo
+                                <td>
+                                    255 karakterden fazla bilgi depoalamak istenildiğinde kullanılır. 65,536 karakter alır.
+                                    <strong>Not:</strong> Bu alanda alfabetik sıralama yapılamaz. Ancak arama işlemleri yapılabilir.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#Byte</td>
+                                <td>0 ile 255 arası tam sayılar için kullanılır. Virgüllü sayılar olmaz.</td>
+                            </tr>
+                            <tr>
+                                <td>#Integer</td>
+                                <td>-32,768 ve 32,767 arasındaki tam sayılar için kullanılır. Virgüllü sayılar olmaz.</td>
+                            </tr>
+                            <tr>
+                                <td>#Long</td>
+                                <td>-2,147,483,648 and 2,147,483,647 arasındaki tam sayılar için kullanılır. Virgüllü sayılar olmaz.</td>
+                            </tr>
+                            <tr>
+                                <td>#Single</td>
+                                <td>Tek basamaklı virgüllü ifadeler için kullanılır.</td>
+                            </tr>
+                            <tr>
+                                <td>#Double</td>
+                                <td>Çok basamakalı virgüllü ifadeler için kullanılır.</td>
+                            </tr>
+                            <tr>
+                                <td>#Currency</td>
+                                <td>
+                                    Para birimi için kullanılır. 15 basamaklı tam sayı ve 4 basamaklı kuruş verisi saklanabilir.
+                                    <strong>Not:</strong>Hangi ülke para birimini kullanacağınızı seçebilirsiniz.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#AutoNumber</td>
+                                <td>Otomatik numara alanıdır. Her kayıt eklendiğinde numara 1 artar. Genel olarak 1'den başlar</td>
+                            </tr>
+                            <tr>
+                                <td>#Date/Time</td>
+                                <td>Tarih ve Saat verilerini saklamak için kullanılır.</td>
+                            </tr>
+                            <tr>
+                                <td>#Yes/No</td>
+                                <td>
+                                    Evet/Hayır, Var/Yok, veya Açık/Kapalı gibi mantıksal verilerde kullanılır. Kodlamada True veya False ifadeleri ile sorgulanabilir.
+                                    <strong>Not:</strong> Bu alan boş olarak geçilemez.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#Ole Object</td>
+                                <td>Resim, ses, video gibi iki taban dosyalarını depolamak için kullanılır.</td>
+                            </tr>
+                            <tr>
+                                <td>#Hyperlink</td>
+                                <td>Web sayfaları dahil olmak üzere diğer dosyalara bağlantılar içerir.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Tables -->
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h2>MySQL Veri Tipleri</h2>
+                    <h5>MySQL veritabanalrında temelde 3 tane veri tipi vardır: <strong>metinsel</strong> , <strong>sayısal</strong> ve <strong>tarih-saat.</strong></h5>
+                    <br />
+                    <h3>Metinsel Veri Tipleri:</h3>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Data Tipi</th>
+                                <th>İşlemi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#CHAR</td>
+                                <td>Boyut ile belirtilen uzunlukta boşluklar da dahil olmak üzere karakter depolar. Bu karkterler harf,  sayılar ve özel karakterlerden (% , & , +  gibi) oluşur. En fazla 255 karakter alır. Belirtilenden az karakter sayısı da girilse belirtilen boyut kadar yer kaplar.</td>
+                            </tr>
+                            <tr>
+                                <td>#VARCHAR</td>
+                                <td>
+                                    Boyut ile belirtilen uzunlukta boşluklar dahil olmak üzere karakter depolar. Bu karkterler harf ve sayılardan oluşur. En fazla 255 karakter alır. En fazla boyut ile belirtilen değer kadar karakter girişi olur. Eğer belirtilenden daha az karakter girilirse, girilen karakter kadar yer kaplar.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#TINYTEXT</td>
+                                <td>En fazla 255 karaktere kadar olan boşluklar dahil metinsel ifadeleri saklar.</td>
+                            </tr>
+                            <tr>
+                                <td>#TEXT</td>
+                                <td>En fazla 65.535 karaktere kadar olan boşluklar dahil metinsel ifadeleri saklar.</td>
+                            </tr>
+                            <tr>
+                                <td>#BLOB</td>
+                                <td>(Binary Long OBjects). Binary yani ikili verilerin saklanacağı durumlarda kullanılır. En fazla 65.535 byte (yaklaşık 64 KB) veri saklanabilir.</td>
+                            </tr>
+                            <tr>
+                                <td>#MEDIUMTEXT</td>
+                                <td>16.777.215 karaktere kadar metinsel ifadeleri depolayabilir.</td>
+                            </tr>
+                            <tr>
+                                <td>#MEDIUMBLOB</td>
+                                <td>16.777.215 karaktere kadar iki kodlama verilerini saklar.</td>
+                            </tr>
+                            <tr>
+                                <td>#LONGTEXT</td>
+                                <td>
+                                    4.294.967.295 karaktere kadar metinsel verileri depolayabilir.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#LONGBLOB</td>
+                                <td>4.294.967.295 karaktere kadar ikili kodlama verisi depolayabilir.</td>
+                            </tr>
+                            <tr>
+                                <td>#ENUM(x,y,z,..)</td>
+                                <td>65535 adede kadar, ihtimalli girişlerde kullanılabilir. Giriş önceliğine göre sıralama yapılır. Giriş formatına örenk: ENUM('X','Y','Z','F')</td>
+                            </tr>
+                            <tr>
+                                <td>#SET</td>
+                                <td>
+                                    Yapısı ENUM'a benzemektedir. Ancak 64 taneye kadar giriş yapılabilir.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Tables -->
+
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h3>Sayısal Veri Tipleri:</h3>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Data Tipi</th>
+                                <th>İşlemi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#TINYINT</td>
+                                <td>-128 ile 127 arasında değer alır. Boyut ile alabileceği sınırı belirtebiliriz.</td>
+                            </tr>
+                            <tr>
+                                <td>#SMALLINT</td>
+                                <td>
+                                    -32.768 ile 32.767 arasında değer alır. Boyut ile alabileceği sınırı belirtebiliriz.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#MEDIUMINT</td>
+                                <td>-8.388.608 ile 8.388.607 arasında değer alır. Boyut ile alabileceği sınırı belirtebiliriz.</td>
+                            </tr>
+                            <tr>
+                                <td>#INT</td>
+                                <td>-2.147.483.648 ile 2.147.483.647  arasında değer alır. Boyut ile alabileceği sınırı belirtebiliriz.</td>
+                            </tr>
+                            <tr>
+                                <td>#BIGINT</td>
+                                <td>-9.223.372.036.854.775.808 ile 9.223.372.036.854.775.807 arasında değer alır. Boyut ile alabileceği sınırı belirtebiliriz.</td>
+                            </tr>
+                            <tr>
+                                <td>#FLOAT</td>
+                                <td>
+                                    Küçük rakamlı virgüllü ifadeler için kullanılır. Boyut ile sayının virgüllü kısmı dahil alabileceği en fazla miktar belirtilirken d ile virgülden sonra kaç basamak olacağı belirtilir.
+                                    Boyut değeri en fazla 23 olabilir.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#DOUBLE</td>
+                                <td>
+                                    Büyük rakamlı virgüllü ifadeler için kullanılır. Boyut ile sayının virgüllü kısmı dahil alabileceği en fazla miktar belirtilirken d ile virgülden sonra kaç basamak olacağı belirtilir.
+                                    Boyut değeri en fazla 53 olabilir.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#DECIMAL</td>
+                                <td>
+                                    DOUBLE'ın yetmediği durumlarda, virgüllü ifadeler için kullanılır. Boyut ile sayının virgüllü kısmı dahil alabileceği en fazla miktar belirtilirken d ile virgülden sonra kaç basamak olacağı belirtilir.
+                                    Boyut değeri en fazla 65 olabilir. Görüleceği üzere FLOAT, DOUBLE ve DECIMAL arasındaki temel fark boyut ile belirtilen basamak sayısıdır. İhtiyaca göre seçim yapılıp kullanılır.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Tables -->
+
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h3>Tarih-Zaman Veri Tipleri:</h3>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Data Tipi</th>
+                                <th>İşlemi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#DATE</td>
+                                <td>Sadece tarih girişi için kullanılır. 'YYYY-AA-GG' şeklinde depolama yapar. '1000-01-01'  ile  '9999-12-31' arasındaki tarihleri destekler.</td>
+                            </tr>
+                            <tr>
+                                <td>#DATETIME</td>
+                                <td>
+                                    Tarih ve saat kombinasyonu için kullanılır. 'YYYY-AA-GG SS:DD:SS' şeklinde depolama yapar. '1000-01-01 00:00:00' ile  '9999-12-31 23:59:59' arasındaki tarihleri destekler.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#TIMESTAMP</td>
+                                <td>Depolama biçimi DATETIME() ile aynıdır. Ancak yazdığınız program üzerinden bu alan veri gönderimi yapılmaz. O anki tarih ve saati otomatik olarak ekler. Eğer elle bir tarih-saat eklenecekse o zaman veritipi DATETIME() olarak ayarlanmalıdır.</td>
+                            </tr>
+                            <tr>
+                                <td>#TIME</td>
+                                <td>Sadece saat verisi saklamak için kullanılır. 'SS:DD:SS' (Saat-dakika-saniye) şeklinde saklar.</td>
+                            </tr>
+                            <tr>
+                                <td>#YEAR</td>
+                                <td>2 veya 4 basamaklı YIL bilgisini saklamak için kullanılır. Dört basamalı verilerde 1901 ile 2155 arası değer saklanır. İki basamaklı verilerde ise 70 ile 69 (1970 ile 2069) değeri saklanır.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Tables -->
+
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h3>Tarih-Zaman Veri Tipleri:</h3>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Data Tipi</th>
+                                <th>İşlemi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#CHAR</td>
+                                <td>Boyut ile belirtilen uzunlukta boşluklar dahil olmak üzere karakter depolar. En fazla 8.000 karaktere kadar depolama yapar. Boyut ile belirtilen değerden az veri girilse bile boyut kadar yer kaplar.</td>
+                            </tr>
+                            <tr>
+                                <td>#VARCHAR</td>
+                                <td>
+                                    Boyut ile belirtilen uzunlukta boşluklar dahil olmak üzere karakter depolar. En fazla 8.000 karakter alır. En fazla boyut ile belirtilen değer kadar karakter girişi olur. Eğer belirtilenden daha az karakter girilirse, girilen karakter kadar yer kaplar.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#VARCHAR(max)</td>
+                                <td>Varchar ile aynı yapıdadır. En fazla 1.073.741.824 adede kadar karakter depolar.</td>
+                            </tr>
+                            <tr>
+                                <td>#TEXT</td>
+                                <td>En fazla 2GB'ye kadar metinsel veri depolamak için kullanılır.</td>
+                            </tr>
+                            <tr>
+                                <td>#NCHAR</td>
+                                <td>2 veya 4 basamaklı YIL bilgisini saklamak için kullanılır. Dört basamalı verilerde 1901 ile 2155 arası değer saklanır. İki basamaklı verilerde ise 70 ile 69 (1970 ile 2069) değeri saklanır.</td>
+                            </tr>
+                            <tr>
+                                <td>#NVARCHAR</td>
+                                <td>En fazla 4.000 karaktere kadar UNICODE veri saklanabilir. Boyut ile belirtilen değerden az veri girilse bile boyut kadar yer kaplar.</td>
+                            </tr>
+                            <tr>
+                                <td>#NVARCHAR(max)</td>
+                                <td>NVARCHAR ile aynı yapıdadır. 536.870.912 adede kadar karakter depolar.</td>
+                            </tr>
+                            <tr>
+                                <td>#NTEXT</td>
+                                <td>En fazla 2GB'ye kadar UNICODE veri depolamak için kullanılır. Girilen karakter kadar yer kaplar.</td>
+                            </tr>
+                            <tr>
+                                <td>#BIT</td>
+                                <td>Sadece 0, 1 veya NULL yani boş değer içerir. Boolean yani var-yok, evet-hayır gibi iki değer alması gerek durumlarda kullanılabilir.</td>
+                            </tr>
+                            <tr>
+                                <td>#BINARY</td>
+                                <td>Belirtilen boyut kadar binary yani ikili bilgi saklar. En fazla 8.000 karakter depolar. Boyut ile belirtilen değerden az veri girilse bile boyut kadar yer kaplar.</td>
+                            </tr>
+                            <tr>
+                                <td>#VARBINARY</td>
+                                <td>Belirtilen boyut kadar binary yani ikili bilgi saklar. En fazla 8.000 karakter depolar. Eğer belirtilenden daha az karakter girilirse, girilen karakter kadar yer kaplar.</td>
+                            </tr>
+                            <tr>
+                                <td>#VARBINARY(max)</td>
+                                <td>VARBINARY ile aynı yapıdadır. En fazla 2GB'ye kadar veri saklar.</td>
+                            </tr>
+                            <tr>
+                                <td>#IMAGE</td>
+                                <td>Resim dosyalarını saklamak için kullanılır. En fazla 2GB'ye kadar veri saklar.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
