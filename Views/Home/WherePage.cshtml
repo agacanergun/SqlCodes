@@ -1,8 +1,269 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "WherePage";
     Layout = "~/Views/Shared/_LayoutTR.cshtml";
 }
 
-<h1>WherePage</h1>
+<!-- Page Heading -->
+<div class="page-heading">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>SQL WHERE Kullanımı</h1>
+                <p>
+                    WHERE ifadesi tablodaki alanlarda okuma, güncelleme, silme gibi işlemleri yaparken belli kriterlere sahip kayıtlar üzerinde işlem yapmamızı sağlar. Where ifadesi belirtilmezse uygulanan komut bütün kayıtlar üzerinde geçerli olur. Mesela bir kaydı silmek istediğimiz zaman Where ifadesini kullanmazsak tablodaki bütün kaıtları silecektir.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 
+
+<br />
+<h3>Where Kullanım Biçimi</h3>
+<div class="TxtClipBoard">
+    <div class="ClipBoardButton">
+        <button id="CopyButton1" style="border: none; background-color: #B0C4DE; color:azure;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+
+            </svg>
+        </button>
+    </div>
+    <div class="Highlight" id="test1">
+        <pre tabindex="0" class="chroma">
+        <code class="langueage-html" data-lang="html"><br />
+        <span><strong>SELECT  alan_adi1,alan_adi2</strong></span>
+        <span><strong>FROM tablo_adi</strong></span>
+        <span><strong>WHERE alan_adi=sorgu_degeri</strong></span>
+            </code>
+        </pre>
+    </div>
+</div>
+
+<p>
+    İlk bakışta kod biraz karışık görünebilir. Açıklayacak olursak;
+    SELECT ifadesi ile sorgunun bir seçme yani veritabanından okuma işlemi yapacağımız belirtmiş olduk. Sonrasında ise hangi alanlarda okuma yapacağımızı belirtiyoruz. Eğer silme işlemi yapacaksak select ifadesi yerine Delete ifadesi kullanılmalıdır.
+    FROM ifadesi ile veritabanı içindeki hangi tabloda işlem yapılacağı belirtiliyor.
+    WHERE ifadesi ile yapmak istediğimiz işlem (seçme, silme vs.) için gerekli parametreleri belirteceğimiz bölüm başlıyor.
+    Where ifadesinin hemen ardından hangi alandaki kritere göre işlem yapacaksan o alan adını yazıyoruz. sorgu_degeri ifadesi ile seçtiğimiz alandaki veri değerini giriyoruz.
+</p>
+<p>
+    Burada eşittir işareti yerine başka operatör işaretleride kullanılabilir. Mesele belli bir sayıdan büyük veya küçük olması durumlarına göre sorgulama yapılabilir. Veya iki tarih arası sorgulama yapılabilir. Aşağıdaki örneklerde detaylı olarak anlatılmıştır. Sayfanın sonunda eşittir dışındaki operatörleri ve ne işe yaradıkları tabloyu inceleyebilirsiniz.
+</p>
+
+
+
+
+<!-- Tables -->
+
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h3>Örnek Tablo Uygulaması:</h3>
+                    <p>Örnek olarak aşağıdaki gibi Personel isimli tablomuz olsun.</p>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Adi_Soyadi</th>
+                                <th>Sehir</th>
+                                <th>Bolum</th>
+                                <th>Meslek_Kodu</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Cengiz Ayhan</td>
+                                <td>İstanbul</td>
+                                <td>Bilgi İşlem Sorumlusu</td>
+                                <td>1234567</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Ahmet Bilge</td>
+                                <td>Kocaeli</td>
+                                <td>İdari İşler Yöneticisi</td>
+                                <td>2345678</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Mehmet Kıran</td>
+                                <td>Erzincan</td>
+                                <td>Muhasebe</td>
+                                <td>3456789</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Efe Kıran</td>
+                                <td>İstanubl</td>
+                                <td>Bilgi İşlem Sorumlusu</td>
+                                <td>2345678</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Tables -->
+
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h3>Örnek1:</h3>
+                    <p><strong>SELECT * FROM Personel WHERE Sehir='İstanbul'</strong></p>
+                    <p>Bu kod ile tablodaki Sehir alanında İstanbul bulunan kayıtları alır. Burada dikkat edilmesi gerek nokta Bolum alanı metinsel alan olduğu için eşittir işaretinden sonra aranmak istenen ifade tek tırnak işareti içinde yazılmıştır. Bazı veritabanı editör uygulamaları çift tırnak işareti kullanabilir.</p>
+                    <p><strong>Çıktısı:</strong></p>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Adi_Soyadi</th>
+                                <th>Sehir</th>
+                                <th>Bolum</th>
+                                <th>Meslek_Kodu</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Cengiz Ayhan</td>
+                                <td>İstanbul</td>
+                                <td>Bilgi İşlem Sorumlusu</td>
+                                <td>1234567</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Efe Kıran</td>
+                                <td>İstanubl</td>
+                                <td>Bilgi İşlem Sorumlusu</td>
+                                <td>2345678</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Exmaples -->
+<section class="top-image">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="down-content">
+                    <h3>Örnek2:</h3>
+                    <p>
+                        <strong>
+                            Delete  FROM Personel Where id=1
+                        </strong>
+                    </p>
+                    <p>
+                        Bu örnekte Personel tabosundan silme işlemi yapılmaktadır. Normalde Select ifadesinden sonra hangi alanlarda işlem yapacağımızı belirtirdik. Ancak Delete komutu alanlarda işlem yapmaz ve direk olarak ilgili kaydı siler. Bu örnekte id alanında 1 yazan kaydın silinmesini belirttik. Genellikle kullanım kolaylığı açısından id alanları tabloda sayısal alan olarak işaretlenir. Sayısal alanlarda işlemler tırnak işareti olmadan yapılır. Aynı şekilde delete yerine select kullanarak kaydı seçtiğimizi varsaysak bile id alanı sayısal alan olduğu için tırnak işaretleri kullanılmaz.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Tables -->
+
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h3>Operatör Işaretleri Tablosu:</h3>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Operatör</th>
+                                <th>Açıklaması</th>
+                                <th>Kullanım Örneği</th>
+                                <th>Örnek Açıklaması</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>=</td>
+                                <td>Belirtilen değeri belirtilen alanda arar</td>
+                                <td>Where Bolum='Bilgisayar'</td>
+                                <td>Bölum alaninda Bilgisayar yazan kayıtları seçer</td>
+                            </tr>
+                            <tr>
+                                <td><></td>
+                                <td>Belirtilen değer dışındaki kayıtları arar</td>
+                                <td>Where Bolum<>'Bilgisayar'</td>
+                                <td>Bölum alaninda Bilgisayar yazmayan kayıtları seçer.</td>
+                            </tr>
+                            <tr>
+                                <td>></td>
+                                <td>Belirtilen değerden büyük kayıtları arar.</td>
+                                <td>Where Maas>1000</td>
+                                <td>Maaşı 1000 TL nin üstünde olanları seçer. (1001 TL ve yukarısı)</td>
+                            </tr>
+                            <tr>
+                                <td>>=</td>
+                                <td>Belirtilen değere eşit ve büyük olanları arar.</td>
+                                <td>Where Maas>=1000</td>
+                                <td>Maaşı 1000 TL ve üstünde olanları seçer. (1000 TL ve üstü)</td>
+                            </tr>
+                            <tr>
+                                <td><</td>
+                                <td>Belitilen değerden küçük olanları arar</td>
+                                <td>Where Maas<750</td>
+                                <td>Maaşı 750 TL nin altında olanları seçer. (749 TL ve altı)</td>
+                            </tr>
+                            <tr>
+                                <td><=</td>
+                                <td>Belirtilen değere eşit ve küçük olanları arar</td>
+                                <td>Whee Maas<=750</td>
+                                <td>Maaşı 750 TL ve altında olanları seçer. (750 TL ve altı)</td>
+                            </tr>
+                            <tr>
+                                <td>Between</td>
+                                <td>Belli bir aralıkta olan değerleri arar</td>
+                                <td>Where Maas Between 750 and 1000</td>
+                                <td>Maaşı 750 TL ile 1000 TL arasında olanları seçer.</td>
+                            </tr>
+                            <tr>
+                                <td>Like</td>
+                                <td>Birkaç karakteri bilinen kayıtları arar</td>
+                                <td>Where Sehir Like 'S%'</td>
+                                <td>Sehir alanında S ile başlayan kayıtları seçer.</td>
+                            </tr>
+                            <tr>
+                                <td>In</td>
+                                <td>Birden fazla değerleri tek alanda arar.</td>
+                                <td>Where Sehir in ('İstanbul','Ankara')</td>
+                                <td>Sehir alanında İstanbul ve Ankara yazan kayıtları seçer.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
