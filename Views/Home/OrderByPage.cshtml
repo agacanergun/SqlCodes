@@ -1,8 +1,429 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "OrderByPage";
     Layout = "~/Views/Shared/_LayoutTR.cshtml";
 }
 
-<h1>OrderByPage</h1>
+<!-- Page Heading -->
+<div class="page-heading">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>SQL ORDER BY Kullanımı</h1>
+                <p>
+                    ORDER BY ifadesi kayıtları belirtilen alanda büyükten küçüğe veya küçükten büyüğe göre sıralar.
+                    <strong>
+                        ASC (ascending) parametresi ile küçükten büyüğe , DESC (descending) parametresi ile büyükten küçüğe göre
+                        sıralar.
+                    </strong> Burada sadece sayısal alanlar değil <strong>metinsel alanlarda alfabetik olarak sıralanabilir.</strong>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 
+
+<br />
+<h3>ORDER BY Kullanım Biçimi</h3>
+<p>Eğer bütün alanlardan veri çekeceksek, Select ifadesinden sonra * işareti konulur. Böylece bütün alanlardan veri çekileceği belirtilmiş olunur.</p>
+<div class="TxtClipBoard">
+    <div class="ClipBoardButton">
+        <button id="CopyButton1" style="border: none; background-color: #B0C4DE; color:azure;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+
+            </svg>
+        </button>
+    </div>
+    <div class="Highlight" id="test1">
+        <pre tabindex="0" class="chroma">
+        <code class="langueage-html" data-lang="html"><br />
+        <span><strong>SELECT  alan_adi1,alan_adi2</strong></span>
+        <span><strong>FROM tablo_adi</strong></span>
+        <span><strong>ORDER BY alan_adi2 ASC</strong></span>
+            </code>
+        </pre>
+    </div>
+</div>
+
+
+<br />
+<h3>ORDER BY Kullanım Biçimi</h3>
+<p>Eğer bütün alanlardan veri çekeceksek, Select ifadesinden sonra * işareti konulur. Böylece bütün alanlardan veri çekileceği belirtilmiş olunur.</p>
+<div class="TxtClipBoard">
+    <div class="ClipBoardButton">
+        <button id="CopyButton2" style="border: none; background-color: #B0C4DE; color:azure;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+
+            </svg>
+        </button>
+    </div>
+    <div class="Highlight" id="test2">
+        <pre tabindex="0" class="chroma">
+        <code class="langueage-html" data-lang="html"><br />
+        <span><strong>SELECT  alan_adi1,alan_adi2</strong></span>
+        <span><strong>FROM tablo_adi</strong></span>
+        <span><strong>ORDER BY alan_adi2 DESC</strong></span>
+            </code>
+        </pre>
+    </div>
+</div>
+
+
+
+<!-- Tables -->
+
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h3>Örnek Tablo Uygulaması:</h3>
+                    <p>Örnek olarak aşağıdaki gibi Personel isimli tablomuz olsun.</p>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Adi_Soyadi</th>
+                                <th>Sehir</th>
+                                <th>Bolum</th>
+                                <th>Sicil No</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Cengiz Ayhan</td>
+                                <td>İstanbul</td>
+                                <td>Bilgi İşlem Sorumlusu</td>
+                                <td>1234567</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Ahmet Bilge</td>
+                                <td>Kocaeli</td>
+                                <td>İdari İşler Yöneticisi</td>
+                                <td>2345678</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Mehmet Kıran</td>
+                                <td>Erzincan</td>
+                                <td>Muhasebe</td>
+                                <td>3456789</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>İlhan Saygın</td>
+                                <td>İstanbul</td>
+                                <td>Bilgi İşlem Sorumlusu</td>
+                                <td>2345678</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Tables -->
+
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h3>Örnek1:</h3>
+                    <p><strong>SELECT * FROM Personel ORDER BY Meslek_Kodu ASC</strong></p>
+                    <p>Bu kod tablodaki Meslek_Kodu alanına göre kayıtları küçükten büyüğe doğru alır.</p>
+                    <p><strong>Çıktısı:</strong></p>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Adi_Soyadi</th>
+                                <th>Sehir</th>
+                                <th>Bolum</th>
+                                <th>Sicil No</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Cengiz Ayhan</td>
+                                <td>İstanbul</td>
+                                <td>Bilgi İşlem Sorumlusu</td>
+                                <td>1234567</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Ahmet Bilge</td>
+                                <td>Kocaeli</td>
+                                <td>İdari İşler Yöneticisi</td>
+                                <td>2345678</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>İlhan Saygın</td>
+                                <td>İstanbul</td>
+                                <td>Bilgi İşlem Sorumlusu</td>
+                                <td>2345678</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Mehmet Kıran</td>
+                                <td>Erzincan</td>
+                                <td>Muhasebe</td>
+                                <td>3456789</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Tables -->
+
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h3>Örnek2:</h3>
+                    <p><strong>SELECT * FROM Personel ORDER BY Meslek_Kodu DESC</strong></p>
+                    <p>Bu kod Adi_soyadi alanına göre kayıtları büyükten küçüğe yani Z harfinden A harfine doğru dizer.</p>
+                    <p><strong>Çıktısı:</strong></p>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Adi_Soyadi</th>
+                                <th>Sehir</th>
+                                <th>Bolum</th>
+                                <th>Sicil No</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>3</td>
+                                <td>Mehmet Kıran</td>
+                                <td>Erzincan</td>
+                                <td>Muhasebe</td>
+                                <td>3456789</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Cengiz Ayhan</td>
+                                <td>İstanbul</td>
+                                <td>Bilgi İşlem Sorumlusu</td>
+                                <td>1234567</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>İlhan Saygın</td>
+                                <td>İstanbul</td>
+                                <td>Bilgi İşlem Sorumlusu</td>
+                                <td>2345678</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Ahmet Bilge</td>
+                                <td>Kocaeli</td>
+                                <td>İdari İşler Yöneticisi</td>
+                                <td>2345678</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tables -->
+
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h3>Örnek3:</h3>
+                    <p><strong>SELECT * FROM Personel Where Sehir='İstanbul' ORDER BY Meslek_kodu ASC</strong></p>
+                    <p>Bu kod Sehir alanında İstanbul yazan kayıtları seçer. ORDER BY ise sadece bu seçili olan kayıtlar üzerinde Meslek_kodu alanını baz alarak küçükten büyüğe doğru sıralama yapar.</p>
+                    <p><strong>Çıktısı:</strong></p>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Adi_Soyadi</th>
+                                <th>Sehir</th>
+                                <th>Bolum</th>
+                                <th>Sicil No</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Cengiz Ayhan</td>
+                                <td>İstanbul</td>
+                                <td>Bilgi İşlem Sorumlusu</td>
+                                <td>1234567</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>İlhan Saygın</td>
+                                <td>İstanbul</td>
+                                <td>Bilgi İşlem Sorumlusu</td>
+                                <td>2345678</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Tables -->
+
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h3>Örnek4:</h3>
+                    <p><strong>SELECT * FROM Personel ORDER BY Meslek_Kodu ASC, Bolum DESC</strong></p>
+                    <p>Bu kod tablodaki Meslek_Kodu alanına göre kayıtları küçükten büyüğe doğru sıralanırken aynı koda sahip kayıt olduğunda Bolum alanı dikkate alınır. Bolum alanı ise DESC yani büyükten küçüğe doğru sıralanır. İlgili tabloda 2345678 nolu meslek kodundan iki tane vardır. Bu durumda Bolum alanı kendi içinde büyükten küçüğe doğru sıralanacaktır. Alfabede "İ" harfi "B" harfinden sonra geldiği için daha büyük kabul edilir ve sıralama işlemi yapılır.</p>
+                    <p><strong>Çıktısı:</strong></p>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Adi_Soyadi</th>
+                                <th>Sehir</th>
+                                <th>Bolum</th>
+                                <th>Sicil No</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Cengiz Ayhan</td>
+                                <td>İstanbul</td>
+                                <td>Bilgi İşlem Sorumlusu</td>
+                                <td>1234567</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Ahmet Bilge</td>
+                                <td>Kocaeli</td>
+                                <td>İdari İşler Yöneticisi</td>
+                                <td>2345678</td>
+                            </tr>
+                            <tr>
+                            <tr>
+                                <td>4</td>
+                                <td>İlhan Saygın</td>
+                                <td>İstanbul</td>
+                                <td>Bilgi İşlem Sorumlusu</td>
+                                <td>2345678</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Mehmet Kıran</td>
+                                <td>Erzincan</td>
+                                <td>Muhasebe</td>
+                                <td>3456789</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Tables -->
+
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h3>Örnek5:</h3>
+                    <p><strong>SELECT * FROM Personel ORDER BY Meslek_Kodu, Bolum ASC</strong></p>
+                    <p>Bu kod tablodaki Meslek_Kodu alanına ve Bolum kodu alanına göre kayıtları küçükten büyüğe doğru sıralama yapılır. Öncelikli olarak Meslek_kodu alanına göre sıralama yapılır. Daha sonra aynı meslek koduna sahip alanlardan Bolum alanına bakarak sıralama yapılır.<p>
+                    <p></p>
+                    <p><strong>Çıktısı:</strong></p>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Adi_Soyadi</th>
+                                <th>Sehir</th>
+                                <th>Bolum</th>
+                                <th>Sicil No</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Cengiz Ayhan</td>
+                                <td>İstanbul</td>
+                                <td>Bilgi İşlem Sorumlusu</td>
+                                <td>1234567</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>İlhan Saygın</td>
+                                <td>İstanbul</td>
+                                <td>Bilgi İşlem Sorumlusu</td>
+                                <td>2345678</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Ahmet Bilge</td>
+                                <td>Kocaeli</td>
+                                <td>İdari İşler Yöneticisi</td>
+                                <td>2345678</td>
+                            </tr>
+                            <tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Mehmet Kıran</td>
+                                <td>Erzincan</td>
+                                <td>Muhasebe</td>
+                                <td>3456789</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
