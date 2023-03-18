@@ -1,8 +1,349 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "SelectTopPage";
     Layout = "~/Views/Shared/_LayoutTR.cshtml";
 }
 
-<h1>SelectTopPage</h1>
 
+<!-- Page Heading -->
+<div class="page-heading">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>SQL SELECT TOP Kullanımı</h1>
+                <p>
+                    SELECT ifadesi veritbanından verileri okumak için kullanılır. <strong>Select ifadesi tek başına kullanıldığında veritabanındaki tablo üzerinde bulunan bütün verileri seçer. Ancak binlerce hatta on binlerce kaydın olduğu bir tablodan bütün verileri çekmek veritabanını zorlayacak ve uygulamanın kitlenmesine neden olacaktır.</strong> Bunun yerine SELECT TOP ile belirtilen kadar kayıt seçilir. Select Top ifadesi ile kayıt adedi veya yüzdesi belirtildikten sonra alan adları mutlaka yazılmalıdır. Yazılan alan adlarındaki kayıtlar ekrana gelir. * işareti konulursa bütün alanlar seçilir.
+                </p>
+                <p>
+                    SELECT TOP ifadesi her veritabanında desteklenmez. Faklı veritabanlarında aynı işi yapan başka ifadeler kullanılır.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- clipboard -->
+<br />
+<h3>Select Top SQL SERVER ve ACCESS Veritabanlarında Kullanım Biçimi</h3>
+<p>Eğer sadece ilk bir kaç kaydı seçecek isek SELECT TOP ifadesinden sonra seçeceğimiz kayıt adedini belirtiriz.</p>
+<div class="TxtClipBoard">
+    <div class="ClipBoardButton">
+        <button id="CopyButton1" style="border: none; background-color: #B0C4DE; color:azure;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+
+            </svg>
+        </button>
+    </div>
+    <div class="Highlight" id="test1">
+        <pre tabindex="0" class="chroma">
+        <code class="langueage-html" data-lang="html"><br />
+        <span><strong>SELECT TOP kayit_adedi alan_adi1,alan_adi2,...</strong></span>
+        <span><strong>FROM tablo_adi</strong></span>
+            </code>
+        </pre>
+    </div>
+</div>
+
+
+<!-- clipboard -->
+<br />
+<p>Eğer bütün kayıtlar içinden yüzdesel olarak seçim yapacaksak.</p>
+<div class="TxtClipBoard">
+    <div class="ClipBoardButton">
+        <button id="CopyButton2" style="border: none; background-color: #B0C4DE; color:azure;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+
+            </svg>
+        </button>
+    </div>
+    <div class="Highlight" id="test2">
+        <pre tabindex="0" class="chroma">
+        <code class="langueage-html" data-lang="html"><br />
+        <span><strong>SELECT TOP yuzde_degeri PERCENT alan_adi1, alan_adi2,...</strong></span>
+        <span><strong>FROM tablo_adi</strong></span>
+            </code>
+        </pre>
+    </div>
+</div>
+
+
+
+<!-- Tables -->
+
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h3>Örnek Tablo Uygulaması:</h3>
+                    <p>Örnek olarak aşağıdaki gibi Personel isimli tablomuz olsun.</p>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Adi</th>
+                                <th>Sehir</th>
+                                <th>Bolum</th>
+                                <th>Sicil No</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Ali</td>
+                                <td>İstanbul</td>
+                                <td>Bilgi İşlem Sorumlusu</td>
+                                <td>1234567</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Okan</td>
+                                <td>Kocaeli</td>
+                                <td>İdari İşler Yöneticisi</td>
+                                <td>2345678</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Süleyman</td>
+                                <td>Erzincan</td>
+                                <td>Bilgi İşlem Sorumlusu</td>
+                                <td>3456789</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Oğuz</td>
+                                <td>İstanbul</td>
+                                <td>Muhasebe</td>
+                                <td>7677667</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Tables -->
+
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h3>Örnek1:</h3>
+                    <p><strong>SELECT TOP 2 Adi, Sehir FROM Personel</strong></p>
+                    <p>Bu kod ile tablodaki Adi ve Sehir alanlarındaki kayıtlardan sadece ilk iki tanesi seçilir.</p>
+                    <p><strong>Çıktısı:</strong></p>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Adi</th>
+                                <th>Sehir</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ali</td>
+                                <td>İstanbul</td>
+                            </tr>
+                            <tr>
+                                <td>Okan</td>
+                                <td>Kocaeli</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Tables -->
+
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h3>Örnek2:</h3>
+                    <p><strong>SELECT TOP 25 Percent * FROM Personel</strong></p>
+                    <p>Bu örnekte Personel tabosunda bütün alanlar seçilmektedir. Ancak bütün kayıtlardan sadece yüzde 25'i seçilmiştir. Tablomuzda toplam 4 kayıt olduğu için bu kod ile sadece 1 kayıt seçilmiş olur.</p>
+                    <p><strong>Çıktısı:</strong></p>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Adi</th>
+                                <th>Sehir</th>
+                                <th>Bolum</th>
+                                <th>Sicil No</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Ali</td>
+                                <td>İstanbul</td>
+                                <td>Bilgi İşlem Sorumlusu</td>
+                                <td>1234567</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- clipboard -->
+<br />
+<p>
+    <strong>
+        Select Top MySQL ve ORACLE Veritabanlarında Kullanım Biçimi
+    </strong>
+</p>
+<p>MySQL Kullanım Biçimi: MySQL veritabanlarında ilgili seçim LIMIT ifadesi ile gerçekleştirilmektedir.</p>
+<div class="TxtClipBoard">
+    <div class="ClipBoardButton">
+        <button id="CopyButton3" style="border: none; background-color: #B0C4DE; color:azure;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+
+            </svg>
+        </button>
+    </div>
+    <div class="Highlight" id="test3">
+        <pre tabindex="0" class="chroma">
+        <code class="langueage-html" data-lang="html"><br />
+        <span><strong>SELECT alan_adi1,alan_adi2,...</strong></span>
+        <span><strong>FROM tablo_adi</strong></span>
+        <span><strong>LIMIT kayit_adedi</strong></span>
+            </code>
+        </pre>
+    </div>
+</div>
+
+
+
+<!-- clipboard -->
+<br />
+<p>
+    <strong>
+        Oracle Kullanım Biçimi: ORACLE veritabanlarında WHERE ROWNUM ifadesi ile birlikte kullanılır.
+    </strong>
+</p>
+<div class="TxtClipBoard">
+    <div class="ClipBoardButton">
+        <button id="CopyButton4" style="border: none; background-color: #B0C4DE; color:azure;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+
+            </svg>
+        </button>
+    </div>
+    <div class="Highlight" id="test4">
+        <pre tabindex="0" class="chroma">
+        <code class="langueage-html" data-lang="html"><br />
+        <span><strong>SELECT alan_adi1,alan_adi2,...</strong></span>
+        <span><strong>FROM tablo_adi</strong></span>
+        <span><strong>WHERE ROWNUM <= kayit_adedi</strong></span>
+            </code>
+        </pre>
+    </div>
+</div>
+
+
+<!-- Tables -->
+
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h3>Örnek3:</h3>
+                    <p><strong>SELECT Adi_soyadi FROM Pesonel LIMIT 3</strong></p>
+                    <p>Bu örnekte sadece Adi alanındaki ilk 3 kayıt seçilmketedir.</p>
+                    <p><strong>Çıktısı:</strong></p>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Adi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ali</td>
+                            </tr>
+                            <tr>
+                                <td>Okan</td>
+                            </tr>
+                            <tr>
+                                <td>Süleyman</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Tables -->
+
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h3>Örnek3:</h3>
+                    <p><strong>SELECT Bolum FROM Pesonel WHERE ROWNUM <= 3</strong></p>
+                    <p>Bu örnekte sadece Bolum alanındaki ilk 3 kayıt seçilmketedir.</p>
+                    <p><strong>Çıktısı:</strong></p>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Bolum</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Bilgi İşlem Sorumlusu</td>
+                            </tr>
+                            <tr>
+                                <td>İdari İşler Yöneticisi</td>
+                            </tr>
+                            <tr>
+                                <td>Bilgi İşlem Sorumlusu</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
