@@ -1,8 +1,270 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "LikePage";
     Layout = "~/Views/Shared/_LayoutTR.cshtml";
 }
 
-<h1>LikePage</h1>
+
+<!-- Page Heading -->
+<div class="page-heading">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>SQL LIKE Kullanımı</h1>
+                <p>
+                    LIKE operatörü tablomuzda bulunan kayıtlardan belirttiğimiz kriterler uygun olanları seçmek için kullanılır.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- clipboard -->
+<br />
+<h3>LIKE Kullanım Biçimi</h3>
+<p>
+    LIKE bir operatördür ve WHERE ile kullanılır. Yani eşittir, büyüktür veya küçüktür işareti yerine kullanılır.
+</p>
+<div class="TxtClipBoard">
+    <div class="ClipBoardButton">
+        <button id="CopyButton1" style="border: none; background-color: #B0C4DE; color:azure;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+
+            </svg>
+        </button>
+    </div>
+    <div class="Highlight" id="test1">
+        <pre tabindex="0" class="chroma">
+        <code class="langueage-html" data-lang="html"><br />
+        <span><strong>SELECT alan_ad(lari)</strong></span>
+        <span><strong>FROM tablo_adi</strong></span>
+        <span><strong>WHERE sorgulanacak_alan_adi LIKE sorgulama_degeri</strong></span>
+            </code>
+        </pre>
+    </div>
+</div>
+
+
+
+<!-- Tables -->
+
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h3>Örnek Tablo Uygulaması:</h3>
+                    <p>Örnek olarak aşağıdaki gibi Personel isimli tablomuz olsun.</p>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Adi</th>
+                                <th>Sehir</th>
+                                <th>Bolum</th>
+                                <th>Meslek_Kodu</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Süleyman</td>
+                                <td>İstanbul</td>
+                                <td>Bilgi İşlem Sorumlusu</td>
+                                <td>1234567</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Emirhan</td>
+                                <td>Kocaeli</td>
+                                <td>İdari İşler Yöneticisi</td>
+                                <td>2345678</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Okan</td>
+                                <td>İstanbul</td>
+                                <td>Finans Yöneticisi</td>
+                                <td>3456789</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<!-- Tables -->
+
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h3>Örnek1:</h3>
+                    <p>
+                        <strong>
+                            SELECT *
+                            FROM Personel
+                            WHERE Sehir LIKE 'İ%'
+                        </strong>
+                    </p>
+                    <p>
+                        Burada dikkat edilecek nokta LIKE ifadesinden sonra % işaretinin kullanılmasıdır. Bu örnekte Sehir alanında İ harfi ile başlayan kayıtlar seçilmiştir. % işareti İ harfinden sonra kalan karakteri temsil eder. Yani bu sorgunun anlamı: Sehir alanındaki verilerden İ harfi ile başlayan kayıtları seç.
+                    </p>
+                    <p><strong>Çıktısı:</strong></p>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Adi</th>
+                                <th>Sehir</th>
+                                <th>Bolum</th>
+                                <th>Meslek_Kodu</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Süleyman</td>
+                                <td><strong>İstanbul</strong></td>
+                                <td>Bilgi İşlem Sorumlusu</td>
+                                <td>1234567</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Okan</td>
+                                <td><strong>İstanbul</strong></td>
+                                <td>Finans Yöneticisi</td>
+                                <td>3456789</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Tables -->
+
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h3>Örnek2:</h3>
+                    <p>
+                        <strong>
+                            SELECT *
+                            FROM Personel
+                            WHERE Bolum LIKE '%Yönetici%'
+                        </strong>
+                    </p>
+                    <p>
+                        Bu kodda Bolum alanının herhangi bir yerinde (başında, ortasında veya sonunda) <strong>Yönetici</strong> kelimesini seçecektir.
+                    </p>
+                    <p><strong>Çıktısı:</strong></p>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Adi</th>
+                                <th>Sehir</th>
+                                <th>Bolum</th>
+                                <th>Meslek_Kodu</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2</td>
+                                <td>Emirhan</td>
+                                <td>Kocaeli</td>
+                                <td>İdari İşler <strong>Yöneticisi</strong></td>
+                                <td>2345678</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Okan</td>
+                                <td>İstanbul</td>
+                                <td>Finans <strong>Yöneticisi</strong></td>
+                                <td>3456789</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Tables -->
+
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h3>Örnek3:</h3>
+                    <h4>BİLGİ: NOT kelimesi ile belirtilen değere sahip olmayan kayıtlar seçilir.</h4>
+                    <p>
+                        <strong>
+                            SELECT *
+                            FROM Personel
+                            WHERE Bolum NOT LIKE '%Yönetici%'
+                        </strong>
+                    </p>
+                    <p>
+                        Bu kod Bolum alanının herhangi bir yerinde <strong>Yönetici yazmayan</strong> kayıtları seçer.
+                    </p>
+                    <p><strong>Çıktısı:</strong></p>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Adi</th>
+                                <th>Sehir</th>
+                                <th>Bolum</th>
+                                <th>Meslek_Kodu</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Süleyman</td>
+                                <td>İstanbul</td>
+                                <td>Bilgi İşlem Sorumlusu</td>
+                                <td>1234567</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
 
