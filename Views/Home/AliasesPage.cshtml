@@ -3,6 +3,326 @@
     Layout = "~/Views/Shared/_LayoutTR.cshtml";
 }
 
-<h1>AliasesPage</h1>
+<!-- Page Heading -->
+<div class="page-heading">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>SQL AS Alias Kullanımı</h1>
+                <p>
+                    AS ifedesi ile uzun ve kullanımı zor olan <strong>tablo veya alan adlarına geçici olarak kısa isimler</strong> vererek bunları kodlamalarımızda kullanabiliriz. <strong>Böylece mevcut tablo yapımız bozmadan anlık olarak belirlediğimiz isimleri kullanabiliriz.</strong> Verilecek olan geçici ad eğer <strong>boşluk içeriyorsa köşeli parantez içinde yazılır.</strong> Tablodaki alan adlarında Türkçe karakter kullanımına izin verilmemektedir. Bu tip durumlarda AS ifadesi ile geçici bir isim verip yazdığımız uygulamada kullanabiliriz.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 
 
+
+<!-- clipboard -->
+<br />
+<h3>AS İfadesinin Alan Adlarında Kullanım Biçimi</h3>
+<div class="TxtClipBoard">
+    <div class="ClipBoardButton">
+        <button id="CopyButton1" style="border: none; background-color: #B0C4DE; color:azure;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+
+            </svg>
+        </button>
+    </div>
+    <div class="Highlight" id="test1">
+        <pre tabindex="0" class="chroma">
+        <code class="langueage-html" data-lang="html"><br />
+        <span><strong>SELECT alan_adi AS gecici_ad</strong></span>
+        <span><strong>FROM tablo_adi</strong></span>
+            </code>
+        </pre>
+    </div>
+</div>
+
+
+<!-- clipboard -->
+<br />
+<h3>AS İfadesinin Tablo adlarında Kullanım Biçimi</h3>
+<div class="TxtClipBoard">
+    <div class="ClipBoardButton">
+        <button id="CopyButton1" style="border: none; background-color: #B0C4DE; color:azure;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+
+            </svg>
+        </button>
+    </div>
+    <div class="Highlight" id="test1">
+        <pre tabindex="0" class="chroma">
+        <code class="langueage-html" data-lang="html"><br />
+        <span><strong>SELECT alan_adi</strong></span>
+        <span><strong>FROM tablo_adi AS gecici_ad</strong></span>
+            </code>
+        </pre>
+    </div>
+</div>
+
+
+
+
+<!-- Tables -->
+
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h3>Örnek Tablo Uygulaması:</h3>
+                    <p>Birinci Tablomuz: Örnek olarak aşağıdaki gibi Personel_Bilgileri isimli tablomuz olsun.</p>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Adi</th>
+                                <th>Sehir</th>
+                                <th>Bolum</th>
+                                <th>Meslek_Kodu</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Süleyman</td>
+                                <td>İstanbul</td>
+                                <td>Bilgi İşlem Sorumlusu</td>
+                                <td>1234567</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Emirhan</td>
+                                <td>İzmit</td>
+                                <td>İdari İşler Yöneticisi</td>
+                                <td>2345678</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Okan</td>
+                                <td>İzmir</td>
+                                <td>Finans Yöneticisi</td>
+                                <td>3456789</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Efe</td>
+                                <td>İstanbul</td>
+                                <td>Muhasebe</td>
+                                <td>7765677</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <p>İkinci Tablomuz: Örnek olarak aşağıdaki gibi Detay_Bilgileri isimli tablomuz olsun.</p>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Satilan_urun</th>
+                                <th>Satis_fiyati</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Buzdolabi</td>
+                                <td>1000</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Çamaşır Makinesi</td>
+                                <td>900</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Buzdolabı</td>
+                                <td>1100</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Televizyon</td>
+                                <td>1800</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Tables -->
+
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h3>Örnek1:</h3>
+                    <p><strong>SELECT Adi AS isim, Sehir AS memleket</strong></p>
+                    <p><strong>FROM Personel_bilgileri </strong></p>
+                    <p>Bu örnekte Adi ve sehir alanları için AS ifadesi ile geçici bir ad verilmiş olunur.</p>
+                    <p><strong>Çıktısı:</strong></p>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>isim</th>
+                                <th>memleket</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Süleyman</td>
+                                <td>İstanbul</td>
+                            </tr>
+                            <tr>
+                                <td>Emirhan</td>
+                                <td>İzmit</td>
+                            </tr>
+                            <tr>
+                                <td>Okan</td>
+                                <td>İzmir</td>
+                            </tr>
+                            <tr>
+                                <td>Efe</td>
+                                <td>İstanbul</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Tables -->
+
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h3>Örnek1:</h3>
+                    <p><strong>SELECT Adi AS isim, Sehir AS [Yaşadığı Şehir]</strong></p>
+                    <p><strong>FROM Personel_bilgileri </strong></p>
+                    <p><strong>WHERE [Yaşadığı Şehir]= 'İstanbul' </strong></p>
+                    <p>Bu kodda görüleceği üzere Sehir alanı için tanımlanan geçici ad WHERE ifadesinden sonra kullanılmaktadır. Artık sorgunun geri kalan kısımlarında [Yaşadığı Şehir] olarak kullanılabilir. Verilen geçici adda boşluk olduğu için köşeli parantez içinde yazılmalıdır.</p>
+                    <p><strong>Çıktısı:</strong></p>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>isim</th>
+                                <th>Yaşadığı Şehir</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Süleyman</td>
+                                <td>İstanbul</td>
+                            <tr>
+                                <td>Efe</td>
+                                <td>İstanbul</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<!-- Tables -->
+
+<section class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h3>Örnek3:</h3>
+                    <p><strong>SELECT personel.id, Adi AS isim, satislar.satilan_urun AS [Ürün], satislar.satis_fiyati AS [Satış Fiyatı]</strong></p>
+                    <p><strong>FROM Personel_bilgileri AS personel, Detay_bilgileri AS satislar</strong></p>
+                    <p><strong>WHERE personel.id=satislar.id</strong></p>
+                    <p>
+                        İlk bakışta oldukça karışık bir kod olarak görünebilir. Burad iki tane tablo bir arada kullanılmıştır. İnceleyecek olursak;
+
+                        FROM ifadesinden sonra Personel_bilgileri isimli tablonun adı kısaltılarak personel yapılmış. Aynı şekilde Detay_bilgileri tablosu ise satislar olarak adlandırılmış.
+                        SELECT ifadesinden sonra, iki tane tablo kullanıldığı için alanadları yazılırken hangi tablodan olduğu belirtilmek zorundadır. İşte burada tabloya verilen kısa ad kullanılabilir.
+                        WHERE ifadesi ile sorgu sonucu ortaya çıkan verilerde iki tablodaki id alanları eşit olan kayıtları seçerek hangi personelin hangi ürünü sattığı öğrenilebilir.
+                    </p>
+                    <p><strong>Çıktısı:</strong></p>
+                </div>
+                <div class="default-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>isim</th>
+                                <th>Ürün</th>
+                                <th>Satış Fiyatı</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Süleyman</td>
+                                <td>Buzdolabi</td>
+                                <td>1000</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Emirhan</td>
+                                <td>Çamaşır Makinesi</td>
+                                <td>900</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Okan</td>
+                                <td>Buzdolabı</td>
+                                <td>1100</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Efe</td>
+                                <td>Televizyon</td>
+                                <td>1800</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
