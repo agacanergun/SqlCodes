@@ -4,5 +4,74 @@
     Layout = "~/Views/Shared/_LayoutTR.cshtml";
 }
 
-<h1>InnerJoinPage</h1>
+
+<!-- Page Heading -->
+<div class="page-heading">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>SQL INNER JOIN Kullanımı</h1>
+                <p>
+                    İki adet tablomuzdaki kayıtları belli bir kritere göre birleştirmek için INNER JOIN komutu kullanılır. Acces veritabanı programında kullanılan tablo arası ilişkileri gibidir.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- clipboard -->
+<br />
+<h3>INNER JOIN Kullanım Biçimi</h3>
+<div class="TxtClipBoard">
+    <div class="ClipBoardButton">
+        <button id="CopyButton1" style="border: none; background-color: #B0C4DE; color:azure;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+
+            </svg>
+        </button>
+    </div>
+    <div class="Highlight" id="test1">
+        <pre tabindex="0" class="chroma">
+        <code class="langueage-html" data-lang="html"><br />
+        <span><strong>SELECT alan_ad(lari)</strong></span>
+        <span><strong>FROM tablo1 INNER JOIN tablo2</strong></span>
+        <span><strong>ON tablo1.alan_adi=tablo2.alan_adi</strong></span>
+            </code>
+        </pre>
+    </div>
+</div>
+
+
+<p>
+    INNER JOIN yerine sadece JOIN kullanılabilir.
+    Burada görüleceği üzere From ifadesi ile birinci tablomuzu ve ardından JOIN (veya INNER JOIN) ile ikinci tablomuzu belirtmiş oluyoruz. ON ile hangi alanların eşitleneceği gösterilmektedir. Birinci tabloda olan bir kayıt ikinci tabloda olmayabilir veya ikinci tabloda olan bir kayıt birinci tabloda olmayabilir. Bu durumda sadece belirtilen alanlarda eşit olan kayıtlar seçilir. Mesele id_no alanına göre eşitleme yapılırsa birinci tabloda id_no alanında 1,2,3 kayıtları ve ikinci tabloda id_no alanında 1,2,3,4,5 kayıtları varsa; bu kayıtlardan sadece 1,2,3 olanlar işleme alınır. Her iki tabloda bulunan ortak kayıtlar seçilir. Yani kesişim kümesi baz alınır.
+</p>
+
+<!-- clipboard -->
+<br />
+<h3>2. KULLANIM BİÇİMİ</h3>
+<div class="TxtClipBoard">
+    <div class="ClipBoardButton">
+        <button id="CopyButton2" style="border: none; background-color: #B0C4DE; color:azure;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+
+            </svg>
+        </button>
+    </div>
+    <div class="Highlight" id="test2">
+        <pre tabindex="0" class="chroma">
+        <code class="langueage-html" data-lang="html"><br />
+        <span><strong>SELECT alan_adi</strong></span>
+        <span><strong>FROM tablo1 JOIN tablo2</strong></span>
+        <span><strong>ON tablo1.alan_adi=tablo2.alan_adi</strong></span>
+            </code>
+        </pre>
+    </div>
+</div>
 
